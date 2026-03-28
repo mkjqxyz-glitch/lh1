@@ -72,6 +72,12 @@ html.dark footer {
   background-color: #050d18 !important;
 }
 
+/* Mobile hamburger drawer — align with V2 dark palette (readable on phone) */
+html.dark .site-nav-drawer-inner {
+  background: rgba(7, 24, 46, 0.98) !important;
+  box-shadow: 0 -12px 48px rgba(0, 0, 0, 0.45) !important;
+}
+
 /* Primary / secondary accents stay recognizable */
 html.dark .text-primary {
   color: #a8c47a !important;
