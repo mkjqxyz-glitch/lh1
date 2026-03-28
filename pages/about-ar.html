@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="ar" dir="rtl" class="light"><head>
+<html lang="ar" dir="rtl"><head>
+<script>
+(function(){try{var k='lh-theme-v2',t=localStorage.getItem(k);if(t!=='dark'&&t!=='light')t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';var r=document.documentElement;r.classList.remove('light');r.classList.toggle('dark',t==='dark');}catch(e){}})();
+</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>من نحن | فندق لوفينغ هومز</title>
@@ -87,24 +90,26 @@
         }
     </style>
 <link href="../assets/site-nav.css" rel="stylesheet"/>
+<link href="../assets/theme-v2.css" rel="stylesheet"/>
 </head>
 <body class="bg-surface text-on-surface font-body antialiased overflow-x-hidden">
 <!-- TopNavBar -->
-<header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-[0_20px_50px_rgba(147,75,25,0.06)]">
+<header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-[#07182E]/90 backdrop-blur-md shadow-[0_20px_50px_rgba(147,75,25,0.06)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
 <nav class="relative flex items-center justify-between gap-3 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-3 md:py-4" aria-label="التنقل الرئيسي">
-<a class="relative z-[1] min-w-0 text-xl sm:text-2xl font-black text-[#5a6147] dark:text-[#8F9779] font-brand truncate max-w-[58vw] sm:max-w-[220px] md:max-w-none" href="../index-ar.html">Loving Homes Dog Hotel</a>
+<a class="relative z-[1] min-w-0 text-xl sm:text-2xl font-black text-[#5a6147] dark:text-[#a8c47a] font-brand truncate max-w-[58vw] sm:max-w-[220px] md:max-w-none" href="../index-ar.html">Loving Homes Dog Hotel</a>
 <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-6 pointer-events-none">
 <div class="pointer-events-auto flex items-center gap-6">
-<a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="../index-ar.html">الرئيسية</a>
+<a class="text-[#1a1c19] dark:text-[#e8eef4] hover:text-[#934b19] transition-colors duration-300" href="../index-ar.html">الرئيسية</a>
 <a class="text-[#934b19] dark:text-[#d37e48] border-b-2 border-[#934b19] font-bold pb-1" href="about-ar.html">من نحن</a>
-<a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="services-ar.html">الخدمات</a>
-<a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="packages-ar.html">الباقات</a>
-<a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="suites-ar.html">الأجنحة</a>
-<a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="contact-ar.html">تواصل</a>
+<a class="text-[#1a1c19] dark:text-[#e8eef4] hover:text-[#934b19] transition-colors duration-300" href="services-ar.html">الخدمات</a>
+<a class="text-[#1a1c19] dark:text-[#e8eef4] hover:text-[#934b19] transition-colors duration-300" href="packages-ar.html">الباقات</a>
+<a class="text-[#1a1c19] dark:text-[#e8eef4] hover:text-[#934b19] transition-colors duration-300" href="suites-ar.html">الأجنحة</a>
+<a class="text-[#1a1c19] dark:text-[#e8eef4] hover:text-[#934b19] transition-colors duration-300" href="contact-ar.html">تواصل</a>
 </div>
 </div>
 <div class="relative z-[1] flex items-center gap-2 sm:gap-3 shrink-0">
-<a class="hidden md:inline-flex text-label text-sm font-medium text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors items-center justify-center rounded-lg px-2 py-2" href="about.html">AR/EN</a>
+<button type="button" class="theme-toggle-btn hidden md:inline-flex h-10 w-10 items-center justify-center rounded-xl text-[#1a1c19] dark:text-[#e8eef4] hover:bg-black/5 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-label="تبديل المظهر"><span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span><span class="material-symbols-outlined text-xl hidden dark:block">light_mode</span></button>
+<a class="hidden md:inline-flex text-label text-sm font-medium text-[#1a1c19] dark:text-[#e8eef4] hover:text-[#934b19] transition-colors items-center justify-center rounded-lg px-2 py-2" href="about.html">AR/EN</a>
 <a class="hidden md:inline-flex bg-primary text-on-primary px-5 py-2.5 rounded-xl text-sm font-brand font-extrabold shadow-md text-center transition-transform active:scale-95" href="packages-ar.html">احجز الآن</a>
 <button type="button" id="site-nav-toggle" class="site-nav-toggle md:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl text-[#1a1c19] dark:text-[#fafaf5] hover:bg-black/5 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-expanded="false" aria-controls="site-nav-drawer" aria-label="فتح القائمة">
 <span class="material-symbols-outlined text-[1.75rem]" aria-hidden="true">menu</span>
@@ -116,7 +121,7 @@
 <div id="site-nav-drawer" class="site-nav-drawer md:hidden" hidden role="dialog" aria-modal="true" aria-labelledby="site-nav-drawer-title">
 <div class="site-nav-drawer-inner">
 <div class="site-nav-drawer-head">
-<h2 id="site-nav-drawer-title" class="text-lg font-black text-[#5a6147] dark:text-[#8F9779] font-brand">القائمة</h2>
+<h2 id="site-nav-drawer-title" class="text-lg font-black text-[#5a6147] dark:text-[#a8c47a] font-brand">القائمة</h2>
 <button type="button" id="site-nav-close" class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-[#1a1c19] dark:text-[#fafaf5] hover:bg-black/5 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-label="إغلاق القائمة">
 <span class="material-symbols-outlined text-2xl" aria-hidden="true">close</span>
 </button>
@@ -132,8 +137,9 @@
 </nav>
 </div>
 <div class="site-nav-drawer-foot">
+<button type="button" class="theme-toggle-btn flex w-full items-center justify-center gap-2 rounded-xl border border-[#1a1c19]/15 dark:border-white/15 py-3 text-sm font-bold text-[#1a1c19] dark:text-[#e8eef4]" aria-label="تبديل المظهر"><span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span><span class="material-symbols-outlined text-xl hidden dark:block">light_mode</span>المظهر</button>
 <a class="site-nav-mobile-cta text-center rounded-xl bg-primary text-on-primary py-3.5 px-4 text-sm font-brand font-extrabold shadow-md" href="packages-ar.html">احجز الآن</a>
-<a class="site-nav-mobile-link text-center text-[#934b19] dark:text-[#d37e48] font-bold" href="about.html">AR / EN</a>
+<a class="site-nav-mobile-link text-center text-[#934b19] dark:text-[#f0a060] font-bold" href="about.html">AR / EN</a>
 </div>
 </div>
 </div>
@@ -148,7 +154,7 @@
 </div>
 <div class="md:col-span-5 relative">
 <div class="aspect-[4/5] rounded-3xl overflow-hidden editorial-shadow transform -rotate-3 transition-transform hover:rotate-0 duration-500">
-<img alt="كلب جولدن ريتريفر أنيق يجلس في مقصورة خشبية مضاءة بنور الشمس" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb6jAwWQjXEJuEhBqEZ9PRCWmoQvDo21TvZbdFX1GMmZygvYgAtXR93TvTtAk1NvU2ePjzzFy87ZJuPwbYV0UEVu2KzBiJnHDYi_gfN3SErfArf8BgNUJf1hj4ttlt0NnUSWVsgCRKqRtRtcElKDE3WzyNTc0eqq0-4pCs5746Vze7wJDjLUuBWJH4N4MBUahPrb8ZSXygyw5sGseJJWRNhAMAodJD04XQYsnkxIgSKo9_qdMKYx37bRV9d4OTlweweAsDwPpl1hqt"/>
+<img loading="lazy" alt="كلب جولدن ريتريفر أنيق يجلس في مقصورة خشبية مضاءة بنور الشمس" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb6jAwWQjXEJuEhBqEZ9PRCWmoQvDo21TvZbdFX1GMmZygvYgAtXR93TvTtAk1NvU2ePjzzFy87ZJuPwbYV0UEVu2KzBiJnHDYi_gfN3SErfArf8BgNUJf1hj4ttlt0NnUSWVsgCRKqRtRtcElKDE3WzyNTc0eqq0-4pCs5746Vze7wJDjLUuBWJH4N4MBUahPrb8ZSXygyw5sGseJJWRNhAMAodJD04XQYsnkxIgSKo9_qdMKYx37bRV9d4OTlweweAsDwPpl1hqt"/>
 </div>
 <div class="absolute -bottom-8 -right-8 bg-secondary-container p-8 rounded-2xl hidden lg:block editorial-shadow">
 <span class="block text-4xl font-headline text-white font-bold">12+</span>
@@ -197,7 +203,7 @@
 <!-- Profile 1 -->
 <div class="group">
 <div class="aspect-[3/4] rounded-[2rem] rounded-br-none overflow-hidden mb-6 relative">
-<img alt="د. سارة الأحمد" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCwm2kbDlbM1LFYpW5no8Qimt16J68ZBviKpaISbH5juK38OLoIrL3zJqJnRo18rrAHUVss0kSdLW05TDsCRxZf-j3bFth7v9ZBGtwvCrNidOeidwiUZw69CwEmGbiUGA-R5pcLYYt0cbSDChQYzjjbaz6Oad77VudVJAiX5rlGZ-Vjw_54DV9-rZ6O22qPnhbBBXZRTzNLaNkjA6IG7TfqHDxFgxMX9E5ea5vVrdzoevwYPg0Pn_KWxVQ5FQXFxi5SpPjuGkr_poi"/>
+<img loading="lazy" alt="د. سارة الأحمد" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCwm2kbDlbM1LFYpW5no8Qimt16J68ZBviKpaISbH5juK38OLoIrL3zJqJnRo18rrAHUVss0kSdLW05TDsCRxZf-j3bFth7v9ZBGtwvCrNidOeidwiUZw69CwEmGbiUGA-R5pcLYYt0cbSDChQYzjjbaz6Oad77VudVJAiX5rlGZ-Vjw_54DV9-rZ6O22qPnhbBBXZRTzNLaNkjA6IG7TfqHDxFgxMX9E5ea5vVrdzoevwYPg0Pn_KWxVQ5FQXFxi5SpPjuGkr_poi"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 </div>
 <h3 class="text-xl font-headline font-bold">د. سارة الأحمد</h3>
@@ -207,7 +213,7 @@
 <!-- Profile 2 -->
 <div class="group pt-8 md:pt-16">
 <div class="aspect-[3/4] rounded-[2rem] rounded-tl-none overflow-hidden mb-6 relative">
-<img alt="ياسر منصور" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV9rj1pXQPwVaeIl86ApbMndikh4mpJY0VRD3PtN_34LUSJFQOTtJxaUWkbqCY8fW_PImMMeIGuYZ5nR5KtZ0eYAV3StUeD11pgYsWhsbLDKe11rcUC9wl01zbz_P55C1X3hjoFwjcOYVGT0Fq2ismXKAwiKLYtuMnc6eXsorYtlHIfXv9O7qqXOGJtMYjfp08wFdwNa6iZ0_HQMUeBM5_qm61dINnuzUi6DQyRyTQnF3Tcsnk1npvRqbz9OfJX19oTD_W6H9G3Cv4"/>
+<img loading="lazy" alt="ياسر منصور" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV9rj1pXQPwVaeIl86ApbMndikh4mpJY0VRD3PtN_34LUSJFQOTtJxaUWkbqCY8fW_PImMMeIGuYZ5nR5KtZ0eYAV3StUeD11pgYsWhsbLDKe11rcUC9wl01zbz_P55C1X3hjoFwjcOYVGT0Fq2ismXKAwiKLYtuMnc6eXsorYtlHIfXv9O7qqXOGJtMYjfp08wFdwNa6iZ0_HQMUeBM5_qm61dINnuzUi6DQyRyTQnF3Tcsnk1npvRqbz9OfJX19oTD_W6H9G3Cv4"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 </div>
 <h3 class="text-xl font-headline font-bold">ياسر منصور</h3>
@@ -217,7 +223,7 @@
 <!-- Profile 3 -->
 <div class="group">
 <div class="aspect-[3/4] rounded-[2rem] rounded-bl-none overflow-hidden mb-6 relative">
-<img alt="لينا كمال" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIMeV6XKSLIdKOobInEbaIxDVXxKZbE8iDSDX_9gEeL6_5kx-Zq1gtKWv_Q9jb-_keA4bDg5_ozXg-U4dQhoaBAHPvqVjv-rb9c6z_nXEtUpNoziRFhPuAl0Vk0z0jo0NpMmjUYyI8_VpzixVSccTu7WH3rSylfQydE5E5fccNWl20FkVd37-dha1nvlnj23CnzLoI2704u_5ozI_3IBD5EqZU_Yx6z0S8vJpWW11FglSZJRyfxCftU4sTEvTJCJoHnFoJpczOBwU2"/>
+<img loading="lazy" alt="لينا كمال" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIMeV6XKSLIdKOobInEbaIxDVXxKZbE8iDSDX_9gEeL6_5kx-Zq1gtKWv_Q9jb-_keA4bDg5_ozXg-U4dQhoaBAHPvqVjv-rb9c6z_nXEtUpNoziRFhPuAl0Vk0z0jo0NpMmjUYyI8_VpzixVSccTu7WH3rSylfQydE5E5fccNWl20FkVd37-dha1nvlnj23CnzLoI2704u_5ozI_3IBD5EqZU_Yx6z0S8vJpWW11FglSZJRyfxCftU4sTEvTJCJoHnFoJpczOBwU2"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 </div>
 <h3 class="text-xl font-headline font-bold">لينا كمال</h3>
@@ -227,7 +233,7 @@
 <!-- Profile 4 -->
 <div class="group pt-8 md:pt-16">
 <div class="aspect-[3/4] rounded-[2rem] rounded-tr-none overflow-hidden mb-6 relative">
-<img alt="عمر فريد" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ2S5WiGOJBtxXJxYtcc6bVvS72q5Sn7MccnUlaFPGsbVUJ-FiizXsODIi4EbsOnEh_IL1EYNstDi0uu5CQaWyA3T08n6dMtQ_Pu0mzyDc-tspyUU8Odk_wdSogZXjb3W3vl74Wwcj0Q2gaP-9JtrtjV31odC4cwXwunQ3dVeAaf5tq6_Mt-P96IBdBLfPnbbvqPPcMYfMspI7HHAr1Xn9Hp0dGei4i6Gx424mhknpPiHnzJp0cG2fmikqyGwRM_NLWWugFsaBCfoG"/>
+<img loading="lazy" alt="عمر فريد" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ2S5WiGOJBtxXJxYtcc6bVvS72q5Sn7MccnUlaFPGsbVUJ-FiizXsODIi4EbsOnEh_IL1EYNstDi0uu5CQaWyA3T08n6dMtQ_Pu0mzyDc-tspyUU8Odk_wdSogZXjb3W3vl74Wwcj0Q2gaP-9JtrtjV31odC4cwXwunQ3dVeAaf5tq6_Mt-P96IBdBLfPnbbvqPPcMYfMspI7HHAr1Xn9Hp0dGei4i6Gx424mhknpPiHnzJp0cG2fmikqyGwRM_NLWWugFsaBCfoG"/>
 <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 </div>
 <h3 class="text-xl font-headline font-bold">عمر فريد</h3>
@@ -237,7 +243,7 @@
 </div>
 </section>
 <!-- CTA Section -->
-<section class="mb-24 px-8 max-w-7xl mx-auto">
+<section class="mb-24 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
 <div class="bg-primary-container rounded-3xl p-12 md:p-24 text-center overflow-hidden relative">
 <div class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 -translate-x-1/2"></div>
 <div class="relative z-10">
@@ -251,7 +257,7 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="w-full rounded-t-[2rem] bg-[#5a6147] dark:bg-stone-950 px-12 py-20 flex flex-col md:flex-row justify-between items-start gap-12">
+<footer class="w-full rounded-t-[2rem] bg-[#5a6147] dark:bg-[#050d18] px-4 sm:px-8 md:px-12 py-16 md:py-20 flex flex-col md:flex-row justify-between items-start gap-12">
 <div class="flex flex-col gap-6 max-w-xs">
 <a class="text-xl font-bold text-[#fafaf5]" href="../index-ar.html">Loving Homes Dog Hotel</a>
 <p class="text-[#fafaf5]/80 font-body text-sm leading-relaxed">وجهتكم الأولى للفخامة والأمان لكلابكم. نحن نصنع فرقاً في حياة أليفك.</p>
@@ -279,5 +285,6 @@
 </div>
 </div>
 </footer>
+<script src="../assets/theme-v2.js" defer></script>
 <script src="../assets/site-nav.js" defer></script>
 </body></html>

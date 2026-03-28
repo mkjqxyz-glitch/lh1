@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en" class="light" dir="ltr"><head>
+<html lang="en" dir="ltr"><head>
+<script>
+(function(){try{var k='lh-theme-v2',t=localStorage.getItem(k);if(t!=='dark'&&t!=='light')t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';var r=document.documentElement;r.classList.remove('light');r.classList.toggle('dark',t==='dark');}catch(e){}})();
+</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Contact | Loving Homes Dog Hotel</title>
@@ -84,24 +87,26 @@
         }
     </style>
 <link href="../assets/site-nav.css" rel="stylesheet"/>
+<link href="../assets/theme-v2.css" rel="stylesheet"/>
 </head>
 <body class="font-body selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
 <!-- TopNavBar -->
-<header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-[0_20px_50px_rgba(147,75,25,0.06)]">
+<header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-[#07182E]/90 backdrop-blur-md shadow-[0_20px_50px_rgba(147,75,25,0.06)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
 <nav class="relative flex items-center justify-between gap-3 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-3 md:py-4 rtl" aria-label="Main navigation">
 <a class="relative z-[1] min-w-0 text-xl sm:text-2xl font-black text-[#5a6147] dark:text-[#8F9779] font-['Abhaya_Libre'] truncate max-w-[58vw] sm:max-w-[220px] md:max-w-none" href="../index.html">Loving Homes Dog Hotel</a>
 <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-8 pointer-events-none">
 <div class="pointer-events-auto flex items-center gap-8">
-<a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="../index.html">Home</a>
-<a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="about.html">About</a>
-<a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="services.html">Services</a>
-<a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="packages.html">Packages</a>
-<a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="suites.html">Suites</a>
+<a class="text-[#1a1c19] dark:text-[#e8eef4] hover:text-[#934b19] transition-colors duration-300" href="../index.html">Home</a>
+<a class="text-[#1a1c19] dark:text-[#e8eef4] hover:text-[#934b19] transition-colors duration-300" href="about.html">About</a>
+<a class="text-[#1a1c19] dark:text-[#e8eef4] hover:text-[#934b19] transition-colors duration-300" href="services.html">Services</a>
+<a class="text-[#1a1c19] dark:text-[#e8eef4] hover:text-[#934b19] transition-colors duration-300" href="packages.html">Packages</a>
+<a class="text-[#1a1c19] dark:text-[#e8eef4] hover:text-[#934b19] transition-colors duration-300" href="suites.html">Suites</a>
 <a class="text-[#934b19] dark:text-[#d37e48] border-b-2 border-[#934b19] pb-1" href="contact.html">Contact</a>
 </div>
 </div>
 <div class="relative z-[1] flex items-center gap-2 sm:gap-3 shrink-0">
-<a class="hidden md:inline-flex text-sm font-['Abhaya_Libre'] font-extrabold text-[#934b19] hover:opacity-80 transition-opacity items-center justify-center rounded-lg px-2 py-2" href="contact-ar.html">EN/AR</a>
+<button type="button" class="theme-toggle-btn hidden md:inline-flex h-10 w-10 items-center justify-center rounded-xl text-[#1a1c19] dark:text-[#e8eef4] hover:bg-black/5 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-label="Toggle color theme"><span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span><span class="material-symbols-outlined text-xl hidden dark:block">light_mode</span></button>
+<a class="hidden md:inline-flex text-sm font-['Abhaya_Libre'] font-extrabold text-[#934b19] dark:text-[#f0a060] hover:opacity-80 transition-opacity items-center justify-center rounded-lg px-2 py-2" href="contact-ar.html">EN/AR</a>
 <a class="hidden md:inline-flex bg-[#934b19] text-white px-5 py-2.5 rounded-xl text-sm font-['Abhaya_Libre'] font-extrabold hover:bg-[#7a3e15] text-center transition-transform active:scale-95" href="packages.html">Book Now</a>
 <button type="button" id="site-nav-toggle" class="site-nav-toggle md:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl text-[#1a1c19] dark:text-[#fafaf5] hover:bg-black/5 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-expanded="false" aria-controls="site-nav-drawer" aria-label="Open menu">
 <span class="material-symbols-outlined text-[1.75rem]" aria-hidden="true">menu</span>
@@ -113,7 +118,7 @@
 <div id="site-nav-drawer" class="site-nav-drawer md:hidden" hidden role="dialog" aria-modal="true" aria-labelledby="site-nav-drawer-title">
 <div class="site-nav-drawer-inner">
 <div class="site-nav-drawer-head">
-<h2 id="site-nav-drawer-title" class="text-lg font-black text-[#5a6147] dark:text-[#8F9779] font-['Abhaya_Libre']">Menu</h2>
+<h2 id="site-nav-drawer-title" class="text-lg font-black text-[#5a6147] dark:text-[#a8c47a] font-['Abhaya_Libre']">Menu</h2>
 <button type="button" id="site-nav-close" class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-[#1a1c19] dark:text-[#fafaf5] hover:bg-black/5 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-label="Close menu">
 <span class="material-symbols-outlined text-2xl" aria-hidden="true">close</span>
 </button>
@@ -129,8 +134,9 @@
 </nav>
 </div>
 <div class="site-nav-drawer-foot">
+<button type="button" class="theme-toggle-btn flex w-full items-center justify-center gap-2 rounded-xl border border-[#1a1c19]/15 dark:border-white/15 py-3 text-sm font-bold text-[#1a1c19] dark:text-[#e8eef4]" aria-label="Toggle color theme"><span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span><span class="material-symbols-outlined text-xl hidden dark:block">light_mode</span>Theme</button>
 <a class="site-nav-mobile-cta text-center rounded-xl bg-[#934b19] text-white py-3.5 px-4 text-sm font-['Abhaya_Libre'] font-extrabold" href="packages.html">Book Now</a>
-<a class="site-nav-mobile-link text-center text-[#934b19] dark:text-[#d37e48] font-bold" href="contact-ar.html">EN / AR</a>
+<a class="site-nav-mobile-link text-center text-[#934b19] dark:text-[#f0a060] font-bold" href="contact-ar.html">EN / AR</a>
 </div>
 </div>
 </div>
@@ -154,7 +160,7 @@
 </section>
 <!-- Map Section -->
 <section class="rounded-[2rem] overflow-hidden aspect-video relative group">
-<img class="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="minimalist aesthetic map of Hong Kong streets with soft golden overlay and boutique hotel pin marker in a premium district" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpa9xup_pipf2jXmTrS83iXRuJEBL0u7UGwqws0nRzZu83b8hQn5ra7QGm4qu-y6rlSIrCqbpvmeK2KQiwdebs3nDp_50dHLDLmqClo03HuRUUXA_nXXaMxOzVKU8CpI6IVxiUaSennuNpg_HyBq6r5kXgHXfjVnpCp5uZ1ez3NNqvaRR4WGDM_0cgyTstc0AmdJ0f9X2f-PG5Z0kNWlDcJcWOYR_rgfRxHhq-URgD9jl9QgMwE64nOGQSPg_GSewacFcpg6sUrT3K"/>
+<img loading="lazy" class="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="minimalist aesthetic map of Hong Kong streets with soft golden overlay and boutique hotel pin marker in a premium district" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpa9xup_pipf2jXmTrS83iXRuJEBL0u7UGwqws0nRzZu83b8hQn5ra7QGm4qu-y6rlSIrCqbpvmeK2KQiwdebs3nDp_50dHLDLmqClo03HuRUUXA_nXXaMxOzVKU8CpI6IVxiUaSennuNpg_HyBq6r5kXgHXfjVnpCp5uZ1ez3NNqvaRR4WGDM_0cgyTstc0AmdJ0f9X2f-PG5Z0kNWlDcJcWOYR_rgfRxHhq-URgD9jl9QgMwE64nOGQSPg_GSewacFcpg6sUrT3K"/>
 <div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
 <div class="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-6 rounded-2xl max-w-xs shadow-lg">
 <h4 class="font-headline font-bold text-primary mb-2">Our Location in Hong Kong</h4>
@@ -221,7 +227,7 @@
 </div>
 </main>
 <!-- Footer -->
-<footer class="w-full rounded-t-[2rem] bg-[#5a6147] dark:bg-stone-950 text-[#fafaf5] px-12 py-20 flex flex-col md:flex-row justify-between items-start gap-12 rtl">
+<footer class="w-full rounded-t-[2rem] bg-[#5a6147] dark:bg-[#050d18] text-[#fafaf5] px-4 sm:px-8 md:px-12 py-16 md:py-20 flex flex-col md:flex-row justify-between items-start gap-12 rtl">
 <div class="space-y-6 max-w-sm">
 <a class="text-xl font-bold text-[#fafaf5] block" href="../index.html">Loving Homes Dog Hotel</a>
 <p class="font-body text-[#fafaf5]/80 leading-relaxed">A safe and luxurious haven for your best friend. We offer more than just a stay; we offer a home away from home.</p>
@@ -244,5 +250,6 @@
 </div>
 </div>
 </footer>
+<script src="../assets/theme-v2.js" defer></script>
 <script src="../assets/site-nav.js" defer></script>
 </body></html>

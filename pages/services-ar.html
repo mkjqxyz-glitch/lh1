@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="ar" dir="rtl" class="light"><head>
+<html lang="ar" dir="rtl"><head>
+<script>
+(function(){try{var k='lh-theme-v2',t=localStorage.getItem(k);if(t!=='dark'&&t!=='light')t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';var r=document.documentElement;r.classList.remove('light');r.classList.toggle('dark',t==='dark');}catch(e){}})();
+</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>الخدمات | فندق لوفينغ هومز</title>
@@ -85,10 +88,11 @@
       }
     </style>
 <link href="../assets/site-nav.css" rel="stylesheet"/>
+<link href="../assets/theme-v2.css" rel="stylesheet"/>
 </head>
 <body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container overflow-x-hidden">
 <!-- TopNavBar -->
-<header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-[0_20px_50px_rgba(147,75,25,0.06)]">
+<header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-[#07182E]/90 backdrop-blur-md shadow-[0_20px_50px_rgba(147,75,25,0.06)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
 <nav class="relative flex items-center justify-between gap-3 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-3 md:py-4" aria-label="التنقل الرئيسي">
 <a class="relative z-[1] min-w-0 text-xl sm:text-2xl font-black text-[#5a6147] dark:text-[#8F9779] font-brand truncate max-w-[58vw] sm:max-w-[220px] md:max-w-none" href="../index-ar.html">Loving Homes Dog Hotel</a>
 <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-6 lg:gap-8 pointer-events-none">
@@ -102,7 +106,8 @@
 </div>
 </div>
 <div class="relative z-[1] flex items-center gap-2 sm:gap-3 shrink-0">
-<a class="hidden md:inline-flex text-label text-sm font-brand text-on-surface-variant hover:text-primary transition-colors items-center justify-center rounded-lg px-2 py-2" href="services.html">EN/AR</a>
+<button type="button" class="theme-toggle-btn hidden md:inline-flex h-10 w-10 items-center justify-center rounded-xl text-[#1a1c19] dark:text-[#e8eef4] hover:bg-black/5 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-label="تبديل المظهر"><span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span><span class="material-symbols-outlined text-xl hidden dark:block">light_mode</span></button>
+<a class="hidden md:inline-flex text-label text-sm font-brand text-on-surface-variant dark:text-[#b0bec8] hover:text-primary transition-colors items-center justify-center rounded-lg px-2 py-2" href="services.html">EN/AR</a>
 <a class="hidden md:inline-flex bg-primary text-on-primary px-5 py-2.5 rounded-xl font-brand text-sm heritage-gradient text-center transition-transform active:scale-95" href="contact-ar.html">احجز الآن</a>
 <button type="button" id="site-nav-toggle" class="site-nav-toggle md:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl text-[#1a1c19] dark:text-[#fafaf5] hover:bg-black/5 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-expanded="false" aria-controls="site-nav-drawer" aria-label="فتح القائمة">
 <span class="material-symbols-outlined text-[1.75rem]" aria-hidden="true">menu</span>
@@ -130,12 +135,13 @@
 </nav>
 </div>
 <div class="site-nav-drawer-foot">
+<button type="button" class="theme-toggle-btn flex w-full items-center justify-center gap-2 rounded-xl border border-[#1a1c19]/15 dark:border-white/15 py-3 text-sm font-bold text-[#1a1c19] dark:text-[#e8eef4]" aria-label="تبديل المظهر"><span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span><span class="material-symbols-outlined text-xl hidden dark:block">light_mode</span>المظهر</button>
 <a class="site-nav-mobile-cta text-center rounded-xl bg-primary text-on-primary py-3.5 px-4 text-sm font-brand font-extrabold heritage-gradient" href="contact-ar.html">احجز الآن</a>
-<a class="site-nav-mobile-link text-center text-[#934b19] dark:text-[#d37e48] font-bold" href="services.html">EN / AR</a>
+<a class="site-nav-mobile-link text-center text-[#934b19] dark:text-[#f0a060] font-bold" href="services.html">EN / AR</a>
 </div>
 </div>
 </div>
-<main class="max-w-7xl mx-auto px-6 lg:px-12 py-20">
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 md:py-20">
 <!-- Hero Section for Services -->
 <section class="mb-24 text-center md:text-right">
 <h1 class="font-headline text-4xl sm:text-5xl md:text-7xl font-bold text-on-surface leading-tight mb-6">
@@ -146,9 +152,9 @@
         </p>
 </section>
 <!-- Services Bento Grid -->
-<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-8 v2-cards-gap">
 <!-- Service 1: Spa & Wellness (Large Feature) -->
-<div class="md:col-span-8 bg-surface-container-low rounded-2xl overflow-hidden group">
+<div class="md:col-span-8 bg-surface-container-low rounded-2xl overflow-hidden group service-card-v2">
 <div class="flex flex-col lg:flex-row h-full">
 <div class="lg:w-1/2 p-10 flex flex-col justify-between">
 <div>
@@ -174,14 +180,14 @@
 <button class="w-fit heritage-gradient text-on-primary px-8 py-3 rounded-full font-bold transition-all hover:scale-105 active:scale-95">طلب الخدمة</button>
 </div>
 <div class="lg:w-1/2 h-64 lg:h-auto overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="close-up of a golden retriever enjoying a professional head massage with soft lighting in a luxury pet spa setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw6EReeoPuVQd2gqpW390POBKOpnfp6QBtEJSS1DwqqXY55PEeDGZv_OhVLBkle21-SfkItRbaP1yM16RXqXwceUcBV4xMhyqXAn10AP0FOBGvlzEK7bm1FDIj96likpwkZHKJSChp63smWp3Yq3tJQ6157DuK_73E6Q_uA93LUcA8lBRS-hxewQIrgL8BHzL_V1Kar3XAOoYBvyPTDqwf0xxr-vhC6l5baasr2aVjhax7camoF9YgXXaRIZCco7lSWhy2ixOLc6kK"/>
+<img loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="close-up of a golden retriever enjoying a professional head massage with soft lighting in a luxury pet spa setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw6EReeoPuVQd2gqpW390POBKOpnfp6QBtEJSS1DwqqXY55PEeDGZv_OhVLBkle21-SfkItRbaP1yM16RXqXwceUcBV4xMhyqXAn10AP0FOBGvlzEK7bm1FDIj96likpwkZHKJSChp63smWp3Yq3tJQ6157DuK_73E6Q_uA93LUcA8lBRS-hxewQIrgL8BHzL_V1Kar3XAOoYBvyPTDqwf0xxr-vhC6l5baasr2aVjhax7camoF9YgXXaRIZCco7lSWhy2ixOLc6kK"/>
 </div>
 </div>
 </div>
 <!-- Service 2: Grooming (Tall Feature) -->
-<div class="md:col-span-4 bg-surface-container-high rounded-2xl overflow-hidden flex flex-col group">
+<div class="md:col-span-4 bg-surface-container-high rounded-2xl overflow-hidden flex flex-col group service-card-v2">
 <div class="h-64 overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="a professional groomer gently brushing a small white fluffy dog in a clean modern aesthetic salon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9fO2A0Zx__miU3U2kFjN--OvY85uxyqq6nzflEH8DhTjW-uSX5xZBAHUushMKWN_5yBPsodxDJO3kB6XYlF9hgKqM1fPzUP4wPQV2AVEgsb20qcGJA-K3w7oFjqF-ZlAinRFZy9doygm_sANy6KL7uX3d3ppF0yu9b3wbP5cFOdNt31Fob4h-8UuXOOOOCNp2KjDEqVAHa9lVavLlER8AmR9hQI2GRtZTUGrv9iJIr31gUIJxTX_Xp7pBTwuut7FgeuAkrQGylYBK"/>
+<img loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="a professional groomer gently brushing a small white fluffy dog in a clean modern aesthetic salon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9fO2A0Zx__miU3U2kFjN--OvY85uxyqq6nzflEH8DhTjW-uSX5xZBAHUushMKWN_5yBPsodxDJO3kB6XYlF9hgKqM1fPzUP4wPQV2AVEgsb20qcGJA-K3w7oFjqF-ZlAinRFZy9doygm_sANy6KL7uX3d3ppF0yu9b3wbP5cFOdNt31Fob4h-8UuXOOOOCNp2KjDEqVAHa9lVavLlER8AmR9hQI2GRtZTUGrv9iJIr31gUIJxTX_Xp7pBTwuut7FgeuAkrQGylYBK"/>
 </div>
 <div class="p-8 flex-grow flex flex-col justify-between">
 <div>
@@ -198,10 +204,10 @@
 </div>
 </div>
 <!-- Service 3: Behavioral Training (Side by Side Feature) -->
-<div class="md:col-span-12 bg-white rounded-2xl p-2 shadow-[0_20px_40px_rgba(29,28,13,0.06)] overflow-hidden group">
+<div class="md:col-span-12 bg-white dark:bg-[#0f2d44] rounded-2xl p-2 shadow-[0_20px_40px_rgba(29,28,13,0.06)] dark:shadow-[0_20px_40px_rgba(0,0,0,0.35)] overflow-hidden group service-card-v2">
 <div class="flex flex-col md:flex-row items-stretch">
 <div class="md:w-1/3 h-80 md:h-auto overflow-hidden rounded-xl">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="a professional dog trainer using positive reinforcement with a focused border collie in a sunlit outdoor green field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEJYw2cB_ykGWu1JKhMZCHQecbo_PRb5bscG8N_C35Iv3BpN_eIeSJPTP7wnPVU_X0nu_gR7DcyCRuAMnh2HaVyv6RPXMYKAt1pzKcNnOtJb-TfobYu13TGpAipWOh2MKvMWjhNBMMSnmXBNDbnLHDwb2U6Am5uq8EE9ixZpQ1PcFDSFrjYQYkXvNeV2LVzV992cg17Hx3yaPXEwi21Zqkasppcgb4v9VPsS6DSrECjVJwn8EvJBcrETT6ttqDfv5ciJfTKi462q6T"/>
+<img loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="a professional dog trainer using positive reinforcement with a focused border collie in a sunlit outdoor green field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEJYw2cB_ykGWu1JKhMZCHQecbo_PRb5bscG8N_C35Iv3BpN_eIeSJPTP7wnPVU_X0nu_gR7DcyCRuAMnh2HaVyv6RPXMYKAt1pzKcNnOtJb-TfobYu13TGpAipWOh2MKvMWjhNBMMSnmXBNDbnLHDwb2U6Am5uq8EE9ixZpQ1PcFDSFrjYQYkXvNeV2LVzV992cg17Hx3yaPXEwi21Zqkasppcgb4v9VPsS6DSrECjVJwn8EvJBcrETT6ttqDfv5ciJfTKi462q6T"/>
 </div>
 <div class="md:w-2/3 p-12 flex flex-col justify-center">
 <div class="flex items-center gap-2 mb-4">
@@ -228,22 +234,22 @@
 </div>
 </div>
 <!-- Additional Value Props Section -->
-<section class="mt-32 grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-outline-variant/30 pt-20">
-<div class="text-center md:text-right">
+<section class="mt-24 sm:mt-32 grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12 border-t border-outline-variant/30 pt-16 sm:pt-20">
+<div class="text-center md:text-right service-card-v2 rounded-2xl p-4 sm:p-0">
 <div class="w-16 h-16 bg-surface-container-highest rounded-2xl flex items-center justify-center mb-6 mx-auto md:mr-0">
 <span class="material-symbols-outlined text-primary text-3xl" data-icon="verified_user">verified_user</span>
 </div>
 <h4 class="font-headline text-xl font-bold mb-3">خبراء معتمدون</h4>
 <p class="text-on-surface-variant">فريقنا مكون من مدربين ومقدمي رعاية ذوي خبرة طويلة وشهادات عالمية.</p>
 </div>
-<div class="text-center md:text-right">
+<div class="text-center md:text-right service-card-v2 rounded-2xl p-4 sm:p-0">
 <div class="w-16 h-16 bg-surface-container-highest rounded-2xl flex items-center justify-center mb-6 mx-auto md:mr-0">
 <span class="material-symbols-outlined text-primary text-3xl" data-icon="eco">eco</span>
 </div>
 <h4 class="font-headline text-xl font-bold mb-3">منتجات عضوية</h4>
 <p class="text-on-surface-variant">نستخدم فقط منتجات تنظيف وتجميل طبيعية 100% وخالية من الكيماويات الضارة.</p>
 </div>
-<div class="text-center md:text-right">
+<div class="text-center md:text-right service-card-v2 rounded-2xl p-4 sm:p-0">
 <div class="w-16 h-16 bg-surface-container-highest rounded-2xl flex items-center justify-center mb-6 mx-auto md:mr-0">
 <span class="material-symbols-outlined text-primary text-3xl" data-icon="videocam">videocam</span>
 </div>
@@ -253,7 +259,7 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="w-full rounded-t-[2rem] bg-[#5a6147] dark:bg-stone-950 text-[#fafaf5] px-12 py-20 flex flex-col md:flex-row justify-between items-start gap-12 rtl">
+<footer class="w-full rounded-t-[2rem] bg-[#5a6147] dark:bg-[#050d18] text-[#fafaf5] px-4 sm:px-8 md:px-12 py-16 md:py-20 flex flex-col md:flex-row justify-between items-start gap-12 rtl">
 <div class="space-y-6 max-w-sm">
 <a class="text-xl font-bold text-[#fafaf5] block" href="../index-ar.html">Loving Homes Dog Hotel</a>
 <p class="text-[#fafaf5]/80 font-body">الوجهة الأولى والوحيدة للرفاهية والأمان لصديقك الأوفى. نحن نهتم بكل تفاصيل إقامة وسعادة كلبك.</p>
@@ -280,5 +286,6 @@
 <p class="text-sm text-[#fafaf5]/60">© 2024 Loving Homes Dog Hotel. All rights reserved.</p>
 </div>
 </footer>
+<script src="../assets/theme-v2.js" defer></script>
 <script src="../assets/site-nav.js" defer></script>
 </body></html>

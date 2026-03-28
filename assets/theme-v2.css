@@ -1,0 +1,170 @@
+/**
+ * Loving Homes — V2.0 theme layer
+ * Dark mode base: #07182E; light mode preserves existing Tailwind semantic colors.
+ */
+
+/* —— Dark mode (html.dark) —— */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #07182e !important;
+  color: #e8eef4;
+}
+
+/* Core semantic surfaces */
+html.dark .bg-surface,
+html.dark .bg-background,
+html.dark .bg-surface-bright {
+  background-color: #07182e !important;
+}
+
+html.dark .bg-surface-container-low {
+  background-color: #0d2438 !important;
+}
+
+html.dark .bg-surface-container-lowest {
+  background-color: #0f2d44 !important;
+}
+
+html.dark .bg-surface-container-high,
+html.dark .bg-surface-container-highest,
+html.dark .bg-surface-variant {
+  background-color: #0f2d44 !important;
+}
+
+html.dark .bg-surface-container {
+  background-color: #0d2438 !important;
+}
+
+html.dark .bg-white {
+  background-color: #0f2d44 !important;
+}
+
+html.dark .text-on-surface,
+html.dark .text-on-background {
+  color: #e8eef4 !important;
+}
+
+html.dark .text-on-surface-variant {
+  color: #b0bec8 !important;
+}
+
+html.dark [class*="border-outline"] {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+html.dark [class*="divide-outline"] > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.dark header.sticky {
+  background-color: rgba(7, 24, 46, 0.92) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+html.dark .glass-panel {
+  background: rgba(15, 45, 68, 0.85) !important;
+}
+
+html.dark footer {
+  background-color: #050d18 !important;
+}
+
+/* Primary / secondary accents stay recognizable */
+html.dark .text-primary {
+  color: #a8c47a !important;
+}
+
+html.dark .text-secondary {
+  color: #f0a060 !important;
+}
+
+/* Tables */
+html.dark .bg-surface.shadow-2xl {
+  background-color: #0f2d44 !important;
+}
+
+/* —— Premium package ribbon (::before + ::after) —— */
+.premium-package-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-package-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  height: 2rem;
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 45%, #dc2626 100%);
+  transform: rotate(-45deg) translate(-28%, -65%);
+  transform-origin: center;
+  z-index: 2;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+.premium-package-card::after {
+  content: attr(data-premium-ribbon);
+  position: absolute;
+  top: 0.55rem;
+  left: 0;
+  width: 7.5rem;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  transform: rotate(-45deg) translate(-8%, 0);
+  z-index: 3;
+  pointer-events: none;
+  text-align: center;
+  font-family: Manrope, system-ui, sans-serif;
+}
+
+html[dir="rtl"] .premium-package-card::before {
+  left: auto;
+  right: 0;
+  transform: rotate(45deg) translate(28%, -65%);
+}
+
+html[dir="rtl"] .premium-package-card::after {
+  left: auto;
+  right: 0;
+  transform: rotate(45deg) translate(8%, 0);
+}
+
+.premium-package-card > .premium-package-card-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* —— Service cards hover (V2) —— */
+.service-card-v2 {
+  transition: all 0.3s ease;
+}
+
+.service-card-v2:hover {
+  transform: scale(0.95);
+}
+
+/* —— Mobile spacing: avoid text flush to edges —— */
+@media (max-width: 639px) {
+  main {
+    padding-left: max(1rem, env(safe-area-inset-left)) !important;
+    padding-right: max(1rem, env(safe-area-inset-right)) !important;
+  }
+
+  .v2-cards-gap {
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .v2-cards-gap {
+    gap: 2rem;
+  }
+}

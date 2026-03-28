@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="ar" dir="rtl" class="light"><head>
+<html lang="ar" dir="rtl"><head>
+<script>
+(function(){try{var k='lh-theme-v2',t=localStorage.getItem(k);if(t!=='dark'&&t!=='light')t=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';var r=document.documentElement;r.classList.remove('light');r.classList.toggle('dark',t==='dark');}catch(e){}})();
+</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>فندق لوفينغ هومز للكلاب - الرئيسية</title>
@@ -81,25 +84,27 @@
       }
     </style>
 <link href="assets/site-nav.css" rel="stylesheet"/>
+<link href="assets/theme-v2.css" rel="stylesheet"/>
 </head>
 <body class="bg-surface text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed overflow-x-hidden">
-<header class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-[0_20px_50px_rgba(147,75,25,0.06)]">
+<header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-[#07182E]/90 backdrop-blur-md shadow-[0_20px_50px_rgba(147,75,25,0.06)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
 <nav class="relative flex items-center justify-between gap-3 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-3 md:py-4" aria-label="التنقل الرئيسي">
-<a class="relative z-[1] min-w-0 text-lg sm:text-2xl font-black text-[#5a6147] font-brand truncate max-w-[58vw] sm:max-w-[200px] md:max-w-none" href="index-ar.html">لوفينغ هومز</a>
+<a class="relative z-[1] min-w-0 text-lg sm:text-2xl font-black text-[#5a6147] dark:text-[#a8c47a] font-brand truncate max-w-[58vw] sm:max-w-[200px] md:max-w-none" href="index-ar.html">لوفينغ هومز</a>
 <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-6 lg:gap-8 pointer-events-none">
 <div class="pointer-events-auto flex items-center gap-6 lg:gap-8">
 <a class="text-[#934b19] border-b-2 border-[#934b19] pb-1 font-semibold" href="index-ar.html">الرئيسية</a>
-<a class="text-[#1a1c19] hover:text-[#934b19] transition-colors duration-300" href="pages/about-ar.html">من نحن</a>
-<a class="text-[#1a1c19] hover:text-[#934b19] transition-colors duration-300" href="pages/services-ar.html">الخدمات</a>
-<a class="text-[#1a1c19] hover:text-[#934b19] transition-colors duration-300" href="pages/packages-ar.html">الباقات</a>
-<a class="text-[#1a1c19] hover:text-[#934b19] transition-colors duration-300" href="pages/suites-ar.html">الأجنحة</a>
-<a class="text-[#1a1c19] hover:text-[#934b19] transition-colors duration-300" href="pages/contact-ar.html">تواصل</a>
+<a class="text-[#1a1c19] dark:text-[#e8eef4] hover:text-[#934b19] transition-colors duration-300" href="pages/about-ar.html">من نحن</a>
+<a class="text-[#1a1c19] dark:text-[#e8eef4] hover:text-[#934b19] transition-colors duration-300" href="pages/services-ar.html">الخدمات</a>
+<a class="text-[#1a1c19] dark:text-[#e8eef4] hover:text-[#934b19] transition-colors duration-300" href="pages/packages-ar.html">الباقات</a>
+<a class="text-[#1a1c19] dark:text-[#e8eef4] hover:text-[#934b19] transition-colors duration-300" href="pages/suites-ar.html">الأجنحة</a>
+<a class="text-[#1a1c19] dark:text-[#e8eef4] hover:text-[#934b19] transition-colors duration-300" href="pages/contact-ar.html">تواصل</a>
 </div>
 </div>
 <div class="relative z-[1] flex items-center gap-2 sm:gap-3 shrink-0">
-<a class="hidden md:inline-flex text-[#1a1c19] text-sm font-bold hover:text-secondary transition-colors items-center justify-center rounded-lg px-2 py-2" href="index.html">AR/EN</a>
+<button type="button" class="theme-toggle-btn hidden md:inline-flex h-10 w-10 items-center justify-center rounded-xl text-[#1a1c19] dark:text-[#e8eef4] hover:bg-black/5 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-label="تبديل المظهر"><span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span><span class="material-symbols-outlined text-xl hidden dark:block">light_mode</span></button>
+<a class="hidden md:inline-flex text-[#1a1c19] dark:text-[#e8eef4] text-sm font-bold hover:text-secondary transition-colors items-center justify-center rounded-lg px-2 py-2" href="index.html">AR/EN</a>
 <a class="hidden md:inline-flex bg-primary-gradient text-on-primary px-5 py-2.5 rounded-xl text-sm font-bold hover:opacity-90 transition-all text-center active:scale-95" href="pages/packages-ar.html">احجز الآن</a>
-<button type="button" id="site-nav-toggle" class="site-nav-toggle md:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl text-[#1a1c19] hover:bg-black/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-expanded="false" aria-controls="site-nav-drawer" aria-label="فتح القائمة">
+<button type="button" id="site-nav-toggle" class="site-nav-toggle md:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl text-[#1a1c19] dark:text-[#e8eef4] hover:bg-black/5 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-expanded="false" aria-controls="site-nav-drawer" aria-label="فتح القائمة">
 <span class="material-symbols-outlined text-[1.75rem]" aria-hidden="true">menu</span>
 </button>
 </div>
@@ -109,8 +114,8 @@
 <div id="site-nav-drawer" class="site-nav-drawer md:hidden" hidden role="dialog" aria-modal="true" aria-labelledby="site-nav-drawer-title">
 <div class="site-nav-drawer-inner">
 <div class="site-nav-drawer-head">
-<h2 id="site-nav-drawer-title" class="text-lg font-black text-[#5a6147] font-brand">القائمة</h2>
-<button type="button" id="site-nav-close" class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-[#1a1c19] hover:bg-black/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-label="إغلاق القائمة">
+<h2 id="site-nav-drawer-title" class="text-lg font-black text-[#5a6147] dark:text-[#a8c47a] font-brand">القائمة</h2>
+<button type="button" id="site-nav-close" class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-[#1a1c19] dark:text-[#e8eef4] hover:bg-black/5 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-label="إغلاق القائمة">
 <span class="material-symbols-outlined text-2xl" aria-hidden="true">close</span>
 </button>
 </div>
@@ -125,8 +130,9 @@
 </nav>
 </div>
 <div class="site-nav-drawer-foot">
+<button type="button" class="theme-toggle-btn flex w-full items-center justify-center gap-2 rounded-xl border border-[#1a1c19]/15 dark:border-white/15 py-3 text-sm font-bold text-[#1a1c19] dark:text-[#e8eef4]" aria-label="تبديل المظهر"><span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span><span class="material-symbols-outlined text-xl hidden dark:block">light_mode</span>المظهر</button>
 <a class="site-nav-mobile-cta text-center rounded-xl bg-primary-gradient text-on-primary py-3.5 px-4 text-sm font-extrabold" href="pages/packages-ar.html">احجز الآن</a>
-<a class="site-nav-mobile-link text-center text-[#934b19] font-bold" href="index.html">AR / EN</a>
+<a class="site-nav-mobile-link text-center text-[#934b19] dark:text-[#f0a060] font-bold" href="index.html">AR / EN</a>
 </div>
 </div>
 </div>
@@ -143,7 +149,7 @@
 </div>
 <div class="relative order-1 lg:order-2">
 <div class="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl relative">
-<img alt="Golden Retriever on sofa" class="w-full h-full object-cover" data-alt="A happy golden retriever lounging comfortably on a plush cream-colored sofa in a sunlit high-end living room with warm earthy tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7HOrYR3VTk4HphVfqME3QaSFifvYsSsXl0GMUGJ7ZRAhBbIrTFjiF0urMgjxkj5AH2K-OEJIXGYDwG1KuW0-M9bin7cDgz29QLdLBsR63-wXPq30KnTNrUWRWzgkKaXBB8_sAvqE2pHf9Vk6tYU581JS49Hu_3bsElbpOmIsvVX_BzHgZgx21Dls-MZBreWTrwIPdZ_WboaVIrvl8U9UjvUqncVTcSy-O9Lb-r_el8OOOr4RrUn32v9dXCDqW7KrlChj1LPp8f-S2"/>
+<img loading="lazy" alt="Golden Retriever on sofa" class="w-full h-full object-cover" data-alt="A happy golden retriever lounging comfortably on a plush cream-colored sofa in a sunlit high-end living room with warm earthy tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7HOrYR3VTk4HphVfqME3QaSFifvYsSsXl0GMUGJ7ZRAhBbIrTFjiF0urMgjxkj5AH2K-OEJIXGYDwG1KuW0-M9bin7cDgz29QLdLBsR63-wXPq30KnTNrUWRWzgkKaXBB8_sAvqE2pHf9Vk6tYU581JS49Hu_3bsElbpOmIsvVX_BzHgZgx21Dls-MZBreWTrwIPdZ_WboaVIrvl8U9UjvUqncVTcSy-O9Lb-r_el8OOOr4RrUn32v9dXCDqW7KrlChj1LPp8f-S2"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
 </div>
 <div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-xl shadow-xl hidden md:block">
@@ -161,27 +167,27 @@
 </div>
 </section>
 <section class="py-28 bg-surface">
-<div class="max-w-7xl mx-auto px-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
 <div class="text-center mb-20">
 <span class="text-secondary font-bold tracking-widest text-sm uppercase">خدماتنا المميزة</span>
 <h2 class="font-headline text-4xl md:text-5xl text-primary mt-4">رعاية شاملة تلبي كافة الاحتياجات</h2>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<a class="group bg-surface-container-low p-10 rounded-xl hover:bg-surface-container-high transition-all duration-300 block" href="pages/suites-ar.html">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8 v2-cards-gap">
+<a class="group bg-surface-container-low p-10 rounded-xl hover:bg-surface-container-high transition-all duration-300 block service-card-v2" href="pages/suites-ar.html">
 <div class="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
 <span class="material-symbols-outlined text-4xl">bed</span>
 </div>
 <h3 class="font-headline text-2xl text-primary mb-4">أجنحة فاخرة</h3>
 <p class="text-on-surface-variant leading-relaxed">غرف مجهزة بأعلى معايير الراحة، تكييف هواء، وأسرة طبية لضمان نوم هادئ ومريح.</p>
 </a>
-<a class="group bg-surface-container-low p-10 rounded-xl hover:bg-surface-container-high transition-all duration-300 block" href="pages/services-ar.html">
+<a class="group bg-surface-container-low p-10 rounded-xl hover:bg-surface-container-high transition-all duration-300 block service-card-v2" href="pages/services-ar.html">
 <div class="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
 <span class="material-symbols-outlined text-4xl">fitness_center</span>
 </div>
 <h3 class="font-headline text-2xl text-primary mb-4">أنشطة ترفيهية</h3>
 <p class="text-on-surface-variant leading-relaxed">برامج لعب وجري يومية في مساحات خضراء واسعة تحت إشراف مدربين متخصصين.</p>
 </a>
-<a class="group bg-surface-container-low p-10 rounded-xl hover:bg-surface-container-high transition-all duration-300 block" href="pages/services-ar.html">
+<a class="group bg-surface-container-low p-10 rounded-xl hover:bg-surface-container-high transition-all duration-300 block service-card-v2" href="pages/services-ar.html">
 <div class="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
 <span class="material-symbols-outlined text-4xl">medical_services</span>
 </div>
@@ -192,17 +198,17 @@
 </div>
 </section>
 <section class="py-28 bg-surface-container-low">
-<div class="max-w-7xl mx-auto px-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 <div class="relative">
 <div class="grid grid-cols-2 gap-4">
 <div class="space-y-4 pt-12">
-<img class="w-full h-64 object-cover rounded-xl" data-alt="Close up of a happy dog running through green grass during sunset" src="https://wallpaperaccess.com/full/1122552.jpg"/>
-<img class="w-full h-80 object-cover rounded-xl" data-alt="Two small dogs playing together in a bright modern pet hotel playroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIp8-Tal4dxvYtKjL6fPqDUG7amqnFmQdYtnXq_gWAETJ1lR5hEqzC49bjKkj2Zn2dXE5JmaiA6ciEz6bsGgSKyVRfvSwsyXYA6cezuAo5mtigrZRjqILRv102ew4Nvn6X2CyRXMHeOOCoL38DL9_d-Xkhjjrw5-pnpvd3SazwmyHprYDNV9lezNgJfBAiUTwmQz34mZRpUb25qfjyjY0WWS_cXAROxq_PDBnvN30F6S6T1mSxNwCYVXUtCFI0sL1JTpZ6Nth1-t1l"/>
+<img loading="lazy" class="w-full h-64 object-cover rounded-xl" data-alt="Close up of a happy dog running through green grass during sunset" src="https://wallpaperaccess.com/full/1122552.jpg"/>
+<img loading="lazy" class="w-full h-80 object-cover rounded-xl" data-alt="Two small dogs playing together in a bright modern pet hotel playroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIp8-Tal4dxvYtKjL6fPqDUG7amqnFmQdYtnXq_gWAETJ1lR5hEqzC49bjKkj2Zn2dXE5JmaiA6ciEz6bsGgSKyVRfvSwsyXYA6cezuAo5mtigrZRjqILRv102ew4Nvn6X2CyRXMHeOOCoL38DL9_d-Xkhjjrw5-pnpvd3SazwmyHprYDNV9lezNgJfBAiUTwmQz34mZRpUb25qfjyjY0WWS_cXAROxq_PDBnvN30F6S6T1mSxNwCYVXUtCFI0sL1JTpZ6Nth1-t1l"/>
 </div>
 <div class="space-y-4">
-<img class="w-full h-80 object-cover rounded-xl" data-alt="A cozy indoor dog suite with a wooden floor and a comfortable pet bed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS6LgCtU3GfFD-e3phCEPbEtmlNzwEGDJa5JuTGV9aWiPYMd92q2ACJR-RGecDeeu_hhb4jP3uL6CPhOJpsLAYFwby3wZi5YeWypd_NIimhUoH68xaAFKnSK9CkwaJvd578c5BXCROOlPZ1nN72d6q36ZDBflLgh9tvCDOIhfK7M58M5E9ARXElRAoNG1aJyKnxqhL8tHh0xWn3tL4ZybHRuWbnkwUHOaaBTEpPi4K_I4-Zxeuf8NJjDLiNhz79CUt73gxkgQLy3Wz"/>
-<img class="w-full h-64 object-cover rounded-xl" data-alt="Professional groomer washing a fluffy white dog with care" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDimEtGqzbCZ239vGhJtpWascX2g4LLzIbnzHwmELUn9E6nYjLsI86uzzniKEDVeZqqAUIgN63XNkJ7t0HWa9WrTarKHg-v9SEBmi4sFiLr9rFrpZakPWWOCHfjvMJ0HNTxFZPvOw7wIZcHUGYogTgmoQyu5_Eo6Lzz6BPoWUo3uzcJiCMn5aKJM_L_rmX7iYs_TEJyMPT9CJgrFxp09PVTOMNQV821GzCyqhB0k3QB36g3yktsJRn9FxULmFsbobPc9Mi1b-LZxKnD"/>
+<img loading="lazy" class="w-full h-80 object-cover rounded-xl" data-alt="A cozy indoor dog suite with a wooden floor and a comfortable pet bed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS6LgCtU3GfFD-e3phCEPbEtmlNzwEGDJa5JuTGV9aWiPYMd92q2ACJR-RGecDeeu_hhb4jP3uL6CPhOJpsLAYFwby3wZi5YeWypd_NIimhUoH68xaAFKnSK9CkwaJvd578c5BXCROOlPZ1nN72d6q36ZDBflLgh9tvCDOIhfK7M58M5E9ARXElRAoNG1aJyKnxqhL8tHh0xWn3tL4ZybHRuWbnkwUHOaaBTEpPi4K_I4-Zxeuf8NJjDLiNhz79CUt73gxkgQLy3Wz"/>
+<img loading="lazy" class="w-full h-64 object-cover rounded-xl" data-alt="Professional groomer washing a fluffy white dog with care" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDimEtGqzbCZ239vGhJtpWascX2g4LLzIbnzHwmELUn9E6nYjLsI86uzzniKEDVeZqqAUIgN63XNkJ7t0HWa9WrTarKHg-v9SEBmi4sFiLr9rFrpZakPWWOCHfjvMJ0HNTxFZPvOw7wIZcHUGYogTgmoQyu5_Eo6Lzz6BPoWUo3uzcJiCMn5aKJM_L_rmX7iYs_TEJyMPT9CJgrFxp09PVTOMNQV821GzCyqhB0k3QB36g3yktsJRn9FxULmFsbobPc9Mi1b-LZxKnD"/>
 </div>
 </div>
 </div>
@@ -243,13 +249,13 @@
 </div>
 </section>
 <section class="py-28 bg-surface">
-<div class="max-w-7xl mx-auto px-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
 <div class="text-center mb-16">
 <span class="text-secondary font-bold tracking-widest text-sm uppercase">قالوا عنا</span>
 <h2 class="font-headline text-4xl md:text-5xl text-primary mt-4">ماذا يقول ضيوفنا عن تجربتهم</h2>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8 v2-cards-gap">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow service-card-v2">
 <div class="flex gap-1 text-secondary-container mb-6">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
@@ -260,7 +266,7 @@
 <p class="text-on-surface-variant italic mb-8 leading-relaxed">"تجربة رائعة حقاً! عاد كلبي 'ماكس' سعيداً جداً. التحديثات اليومية منحتني راحة بال كبيرة خلال فترة سفري."</p>
 <div class="flex items-center gap-4">
 <div class="w-12 h-12 rounded-full overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="Close up portrait of a smiling middle-aged man with short hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADvplAVYnQAsPcvqSLJrpyf7I873ShDgktC92FoPqFGsN-Cb6ptMnhhyXTTXbssqSm7u_ZOw_SoDqjm_hEGgfF9nGJopIXLmDTPIFS5r_LMxXXQYMXrFB7vIpExv8PQRqwb_shRU8gJkBgSL33KHoi6Qoe8kZFVxHkm6N6v1H6HyhrprFyiptsljCFbw1lSUE2E9RLWzNj4KiH8uVvJiaWz5XtFQvZzntia_8WyjhRLWZCJwChXn9Sf6zspcOfZ4bMoPX7rgLU170o"/>
+<img loading="lazy" class="w-full h-full object-cover" data-alt="Close up portrait of a smiling middle-aged man with short hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADvplAVYnQAsPcvqSLJrpyf7I873ShDgktC92FoPqFGsN-Cb6ptMnhhyXTTXbssqSm7u_ZOw_SoDqjm_hEGgfF9nGJopIXLmDTPIFS5r_LMxXXQYMXrFB7vIpExv8PQRqwb_shRU8gJkBgSL33KHoi6Qoe8kZFVxHkm6N6v1H6HyhrprFyiptsljCFbw1lSUE2E9RLWzNj4KiH8uVvJiaWz5XtFQvZzntia_8WyjhRLWZCJwChXn9Sf6zspcOfZ4bMoPX7rgLU170o"/>
 </div>
 <div>
 <h5 class="font-bold text-primary">سارة العلي</h5>
@@ -268,7 +274,7 @@
 </div>
 </div>
 </div>
-<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow service-card-v2">
 <div class="flex gap-1 text-secondary-container mb-6">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
@@ -279,7 +285,7 @@
 <p class="text-on-surface-variant italic mb-8 leading-relaxed">"أفضل فندق للكلاب في المنطقة. نظافة استثنائية وتعامل احترافي للغاية. شكراً للفريق بأكمله على اهتمامهم بالتفاصيل."</p>
 <div class="flex items-center gap-4">
 <div class="w-12 h-12 rounded-full overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="Professional looking woman smiling warmly with neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCokV3ptuV7wpxQcuGkzwLVmtayaunAxmcyA4BVkkWfrC6YllE8Su8MWKNJ319-tKMNGfKGDbULd32sBe4Vni4bGo6FMGnZf6fv1PTxwodVyNHChtCTovKPxk2QkH_78MNezjj6x7Sk8QcbbwXR7FOc-f7HLmNqL-f4t5L6INjnvNj66QezYGyXPxa_ogI8MzS4ZnzffeGdILKJrs3wB2tpRNJbVo8bxebBCIwNdYsdDb_2pBr7GO8oyMtwsNRt6gDVcD3ngMJVnClT"/>
+<img loading="lazy" class="w-full h-full object-cover" data-alt="Professional looking woman smiling warmly with neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCokV3ptuV7wpxQcuGkzwLVmtayaunAxmcyA4BVkkWfrC6YllE8Su8MWKNJ319-tKMNGfKGDbULd32sBe4Vni4bGo6FMGnZf6fv1PTxwodVyNHChtCTovKPxk2QkH_78MNezjj6x7Sk8QcbbwXR7FOc-f7HLmNqL-f4t5L6INjnvNj66QezYGyXPxa_ogI8MzS4ZnzffeGdILKJrs3wB2tpRNJbVo8bxebBCIwNdYsdDb_2pBr7GO8oyMtwsNRt6gDVcD3ngMJVnClT"/>
 </div>
 <div>
 <h5 class="font-bold text-primary">منى الأحمد</h5>
@@ -287,7 +293,7 @@
 </div>
 </div>
 </div>
-<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow service-card-v2">
 <div class="flex gap-1 text-secondary-container mb-6">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
@@ -298,7 +304,7 @@
 <p class="text-on-surface-variant italic mb-8 leading-relaxed">"المكان واسع جداً ونظيف. أعجبني توفيرهم لوجبات مخصصة بناءً على توصية الطبيب. خدمة 5 نجوم بالفعل."</p>
 <div class="flex items-center gap-4">
 <div class="w-12 h-12 rounded-full overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="Portrait of a young friendly looking man with casual attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy2nO7MzChX6I667v2_4WiHkwlam72XhXoqh_gGIzXlSXwiNBGF32e2pCyQVIrpEgJCcrFvAg8rV-_Suwx0TM7ATXb_L_E_rmU6djc_I9L-Hb8oXJvzGUQIZyoi0oGfn22NcYgUusAxQIRPBNQrdvhkvSB8DQm-LuxJSNWxl8LzIpbWAkOy-B_P65aNBEwVAhXTWie9ejcl5ScD9SuW5znZOhzf2gChuOQxXxeCj1mPijC51LFFm_G6Ikr22ns1nBwkYF7Jeq9dbNF"/>
+<img loading="lazy" class="w-full h-full object-cover" data-alt="Portrait of a young friendly looking man with casual attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy2nO7MzChX6I667v2_4WiHkwlam72XhXoqh_gGIzXlSXwiNBGF32e2pCyQVIrpEgJCcrFvAg8rV-_Suwx0TM7ATXb_L_E_rmU6djc_I9L-Hb8oXJvzGUQIZyoi0oGfn22NcYgUusAxQIRPBNQrdvhkvSB8DQm-LuxJSNWxl8LzIpbWAkOy-B_P65aNBEwVAhXTWie9ejcl5ScD9SuW5znZOhzf2gChuOQxXxeCj1mPijC51LFFm_G6Ikr22ns1nBwkYF7Jeq9dbNF"/>
 </div>
 <div>
 <h5 class="font-bold text-primary">خالد فهد</h5>
@@ -310,7 +316,7 @@
 </div>
 </section>
 <section class="py-20">
-<div class="max-w-7xl mx-auto px-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
 <div class="bg-[#5a6147] rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
 <div class="absolute inset-0 opacity-10 pointer-events-none">
 <div class="absolute top-10 right-10 w-40 h-40 rounded-full border-4 border-white"></div>
@@ -323,7 +329,7 @@
 </div>
 </section>
 </main>
-<footer class="bg-[#5a6147] dark:bg-stone-950 w-full rounded-t-[2rem] px-12 py-20 flex flex-col md:flex-row justify-between items-start gap-12 text-[#fafaf5]">
+<footer class="bg-[#5a6147] dark:bg-[#050d18] w-full rounded-t-[2rem] px-4 sm:px-8 md:px-12 py-16 md:py-20 flex flex-col md:flex-row justify-between items-start gap-12 text-[#fafaf5]">
 <div class="max-w-xs">
 <a class="text-xl font-bold text-[#fafaf5] mb-6 block" href="index-ar.html">لوفينغ هومز</a>
 <p class="text-[#fafaf5]/80 font-body mb-8">نحن نوفر لأليفك تجربة إقامة فاخرة تجمع بين الراحة والأمان والحب.</p>
@@ -365,5 +371,6 @@
 </div>
 </div>
 </footer>
+<script src="assets/theme-v2.js" defer></script>
 <script src="assets/site-nav.js" defer></script>
 </body></html>
