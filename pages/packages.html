@@ -177,7 +177,7 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
 <div class="flex flex-col md:flex-row gap-6 sm:gap-8 v2-cards-gap items-stretch">
 <!-- Day Care Card -->
-<div class="flex-1 bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col group border border-outline-variant/10">
+<div class="flex-1 min-w-0 bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col group border border-outline-variant/10">
 <div class="mb-8">
 <div class="w-14 h-14 bg-surface-container-high rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
 <span class="material-symbols-outlined text-3xl">wb_sunny</span>
@@ -203,7 +203,7 @@
 <a class="w-full bg-surface-container-high hover:bg-primary hover:text-on-primary text-primary font-bold py-4 rounded-xl transition-all duration-300 text-center block" href="contact.html">Order Now</a>
 </div>
 <!-- Classic Package (Highlighted) -->
-<div class="flex-1 bg-primary text-on-primary p-8 rounded-[2rem] shadow-2xl scale-105 z-10 flex flex-col relative overflow-hidden group">
+<div class="flex-1 min-w-0 bg-primary text-on-primary p-8 rounded-[2rem] shadow-2xl z-10 flex flex-col relative overflow-hidden group md:scale-105">
 <div class="absolute top-0 right-0 p-4">
 <span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-xs font-bold uppercase">Most Popular</span>
 </div>
@@ -232,7 +232,8 @@
 <a class="w-full bg-on-primary text-primary hover:bg-secondary-container hover:text-on-secondary-container font-bold py-4 rounded-xl transition-all duration-300 shadow-lg text-center block" href="contact.html">Order Now</a>
 </div>
 <!-- Premium Package -->
-<div class="flex-1 bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col group border border-outline-variant/10 premium-package-card" data-premium-ribbon="Premium">
+<div class="flex-1 min-w-0 premium-package-card premium-package-card--animated flex flex-col group">
+<span class="premium-package-ribbon-label">Premium</span>
 <div class="premium-package-card-inner">
 <div class="mb-8">
 <div class="w-14 h-14 bg-surface-container-high rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
@@ -268,48 +269,48 @@
 <h2 class="text-4xl font-headline font-black text-on-surface mb-4">Service Comparison Matrix</h2>
 <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
 </div>
-<div class="overflow-hidden rounded-[2rem] border border-outline-variant/20 shadow-2xl bg-surface">
-<table class="w-full border-collapse text-left">
+<div class="rounded-[2rem] border border-outline-variant/20 shadow-2xl bg-surface overflow-x-auto overscroll-x-contain">
+<table class="w-full min-w-[560px] border-collapse text-left">
 <thead>
 <tr class="bg-primary text-on-primary">
-<th class="p-8 text-xl font-headline text-left">Feature</th>
-<th class="p-8 text-xl font-headline text-center border-r border-on-primary/10">Day Care</th>
-<th class="p-8 text-xl font-headline text-center border-r border-on-primary/10">Classic</th>
-<th class="p-8 text-xl font-headline text-center border-r border-on-primary/10">Premium</th>
+<th class="p-3 sm:p-5 md:p-8 text-sm md:text-xl font-headline text-left">Feature</th>
+<th class="p-3 sm:p-5 md:p-8 text-sm md:text-xl font-headline text-center border-r border-on-primary/10">Day Care</th>
+<th class="p-3 sm:p-5 md:p-8 text-sm md:text-xl font-headline text-center border-r border-on-primary/10">Classic</th>
+<th class="p-3 sm:p-5 md:p-8 text-sm md:text-xl font-headline text-center border-r border-on-primary/10">Premium</th>
 </tr>
 </thead>
 <tbody class="divide-y divide-outline-variant/20">
 <tr class="hover:bg-surface-container-low transition-colors">
-<td class="p-8 font-bold text-on-surface">Number of Meals</td>
-<td class="p-8 text-center border-r border-outline-variant/10 text-on-surface-variant">1 meal</td>
-<td class="p-8 text-center border-r border-outline-variant/10 text-on-surface-variant">2 meals</td>
-<td class="p-8 text-center border-r border-outline-variant/10 text-on-surface-variant font-bold text-primary">3 meals + snacks</td>
+<td class="p-3 sm:p-5 md:p-8 font-bold text-on-surface">Number of Meals</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-r border-outline-variant/10 text-on-surface-variant">1 meal</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-r border-outline-variant/10 text-on-surface-variant">2 meals</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-r border-outline-variant/10 text-on-surface-variant font-bold text-primary">3 meals + snacks</td>
 </tr>
 <tr class="hover:bg-surface-container-low transition-colors">
-<td class="p-8 font-bold text-on-surface">Video Monitoring</td>
-<td class="p-8 text-center border-r border-outline-variant/10">
+<td class="p-3 sm:p-5 md:p-8 font-bold text-on-surface">Video Monitoring</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-r border-outline-variant/10">
 <span class="material-symbols-outlined text-error">close</span>
 </td>
-<td class="p-8 text-center border-r border-outline-variant/10">
+<td class="p-3 sm:p-5 md:p-8 text-center border-r border-outline-variant/10">
 <span class="material-symbols-outlined text-primary" data-weight="fill">check_circle</span>
 </td>
-<td class="p-8 text-center border-r border-outline-variant/10">
+<td class="p-3 sm:p-5 md:p-8 text-center border-r border-outline-variant/10">
 <span class="material-symbols-outlined text-primary text-3xl" data-weight="fill">check_circle</span>
 </td>
 </tr>
 <tr class="hover:bg-surface-container-low transition-colors">
-<td class="p-8 font-bold text-on-surface">Play Sessions</td>
-<td class="p-8 text-center border-r border-outline-variant/10 text-on-surface-variant">30 min / 2 times</td>
-<td class="p-8 text-center border-r border-outline-variant/10 text-on-surface-variant">1 hour / 3 times</td>
-<td class="p-8 text-center border-r border-outline-variant/10 text-on-surface-variant font-bold text-primary">Unlimited time + private training</td>
+<td class="p-3 sm:p-5 md:p-8 font-bold text-on-surface">Play Sessions</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-r border-outline-variant/10 text-on-surface-variant">30 min / 2 times</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-r border-outline-variant/10 text-on-surface-variant">1 hour / 3 times</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-r border-outline-variant/10 text-on-surface-variant font-bold text-primary">Unlimited time + private training</td>
 </tr>
 <tr class="hover:bg-surface-container-low transition-colors">
-<td class="p-8 font-bold text-on-surface">Grooming &amp; Hygiene</td>
-<td class="p-8 text-center border-r border-outline-variant/10">
+<td class="p-3 sm:p-5 md:p-8 font-bold text-on-surface">Grooming &amp; Hygiene</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-r border-outline-variant/10">
 <span class="material-symbols-outlined text-error">close</span>
 </td>
-<td class="p-8 text-center border-r border-outline-variant/10 text-on-surface-variant">Basic wash</td>
-<td class="p-8 text-center border-r border-outline-variant/10 text-on-surface-variant font-bold text-primary">Full "Spa" session weekly</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-r border-outline-variant/10 text-on-surface-variant">Basic wash</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-r border-outline-variant/10 text-on-surface-variant font-bold text-primary">Full "Spa" session weekly</td>
 </tr>
 </tbody>
 </table>

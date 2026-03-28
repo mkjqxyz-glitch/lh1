@@ -177,7 +177,7 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
 <div class="flex flex-col md:flex-row gap-6 sm:gap-8 v2-cards-gap items-stretch">
 <!-- Day Care Card -->
-<div class="flex-1 bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col group border border-outline-variant/10">
+<div class="flex-1 min-w-0 bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col group border border-outline-variant/10">
 <div class="mb-8">
 <div class="w-14 h-14 bg-surface-container-high rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
 <span class="material-symbols-outlined text-3xl no-mirror">wb_sunny</span>
@@ -203,7 +203,7 @@
 <a class="w-full bg-surface-container-high hover:bg-primary hover:text-on-primary text-primary font-bold py-4 rounded-xl transition-all duration-300 text-center block" href="contact-ar.html">اطلب الآن</a>
 </div>
 <!-- Classic Package (Highlighted) -->
-<div class="flex-1 bg-primary text-on-primary p-8 rounded-[2rem] shadow-2xl scale-105 z-10 flex flex-col relative overflow-hidden group">
+<div class="flex-1 min-w-0 bg-primary text-on-primary p-8 rounded-[2rem] shadow-2xl z-10 flex flex-col relative overflow-hidden group md:scale-105">
 <div class="absolute top-0 left-0 p-4">
 <span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-xs font-bold uppercase">الأكثر شعبية</span>
 </div>
@@ -232,7 +232,8 @@
 <a class="w-full bg-on-primary text-primary hover:bg-secondary-container hover:text-on-secondary-container font-bold py-4 rounded-xl transition-all duration-300 shadow-lg text-center block" href="contact-ar.html">اطلب الآن</a>
 </div>
 <!-- Premium Package -->
-<div class="flex-1 bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col group border border-outline-variant/10 premium-package-card" data-premium-ribbon="مميز">
+<div class="flex-1 min-w-0 premium-package-card premium-package-card--animated flex flex-col group">
+<span class="premium-package-ribbon-label">مميز</span>
 <div class="premium-package-card-inner">
 <div class="mb-8">
 <div class="w-14 h-14 bg-surface-container-high rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
@@ -268,48 +269,48 @@
 <h2 class="text-4xl font-headline font-black text-on-surface mb-4">مصفوفة مقارنة الخدمات</h2>
 <div class="w-24 h-1 bg-secondary mx-auto rounded-full"></div>
 </div>
-<div class="overflow-hidden rounded-[2rem] border border-outline-variant/20 shadow-2xl bg-surface">
-<table class="w-full border-collapse text-right">
+<div class="rounded-[2rem] border border-outline-variant/20 shadow-2xl bg-surface overflow-x-auto overscroll-x-contain">
+<table class="w-full min-w-[560px] border-collapse text-right">
 <thead>
 <tr class="bg-primary text-on-primary">
-<th class="p-8 text-xl font-headline text-right">الميزة</th>
-<th class="p-8 text-xl font-headline text-center border-l border-on-primary/10">الرعاية النهارية</th>
-<th class="p-8 text-xl font-headline text-center border-l border-on-primary/10">الكلاسيكية</th>
-<th class="p-8 text-xl font-headline text-center border-l border-on-primary/10">الممتازة</th>
+<th class="p-3 sm:p-5 md:p-8 text-sm md:text-xl font-headline text-right">الميزة</th>
+<th class="p-3 sm:p-5 md:p-8 text-sm md:text-xl font-headline text-center border-l border-on-primary/10">الرعاية النهارية</th>
+<th class="p-3 sm:p-5 md:p-8 text-sm md:text-xl font-headline text-center border-l border-on-primary/10">الكلاسيكية</th>
+<th class="p-3 sm:p-5 md:p-8 text-sm md:text-xl font-headline text-center border-l border-on-primary/10">الممتازة</th>
 </tr>
 </thead>
 <tbody class="divide-y divide-outline-variant/20">
 <tr class="hover:bg-surface-container-low transition-colors">
-<td class="p-8 font-bold text-on-surface">عدد الوجبات</td>
-<td class="p-8 text-center border-l border-outline-variant/10 text-on-surface-variant">وجبة واحدة</td>
-<td class="p-8 text-center border-l border-outline-variant/10 text-on-surface-variant">وجبتان</td>
-<td class="p-8 text-center border-l border-outline-variant/10 text-on-surface-variant font-bold text-primary">3 وجبات + وجبات خفيفة</td>
+<td class="p-3 sm:p-5 md:p-8 font-bold text-on-surface">عدد الوجبات</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-l border-outline-variant/10 text-on-surface-variant">وجبة واحدة</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-l border-outline-variant/10 text-on-surface-variant">وجبتان</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-l border-outline-variant/10 text-on-surface-variant font-bold text-primary">3 وجبات + وجبات خفيفة</td>
 </tr>
 <tr class="hover:bg-surface-container-low transition-colors">
-<td class="p-8 font-bold text-on-surface">مراقبة الفيديو</td>
-<td class="p-8 text-center border-l border-outline-variant/10">
+<td class="p-3 sm:p-5 md:p-8 font-bold text-on-surface">مراقبة الفيديو</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-l border-outline-variant/10">
 <span class="material-symbols-outlined text-error no-mirror">close</span>
 </td>
-<td class="p-8 text-center border-l border-outline-variant/10">
+<td class="p-3 sm:p-5 md:p-8 text-center border-l border-outline-variant/10">
 <span class="material-symbols-outlined text-primary no-mirror" data-weight="fill">check_circle</span>
 </td>
-<td class="p-8 text-center border-l border-outline-variant/10">
+<td class="p-3 sm:p-5 md:p-8 text-center border-l border-outline-variant/10">
 <span class="material-symbols-outlined text-primary text-3xl no-mirror" data-weight="fill">check_circle</span>
 </td>
 </tr>
 <tr class="hover:bg-surface-container-low transition-colors">
-<td class="p-8 font-bold text-on-surface">جلسات اللعب</td>
-<td class="p-8 text-center border-l border-outline-variant/10 text-on-surface-variant">30 دقيقة / مرتين</td>
-<td class="p-8 text-center border-l border-outline-variant/10 text-on-surface-variant">ساعة واحدة / 3 مرات</td>
-<td class="p-8 text-center border-l border-outline-variant/10 text-on-surface-variant font-bold text-primary">وقت مفتوح + تدريب خاص</td>
+<td class="p-3 sm:p-5 md:p-8 font-bold text-on-surface">جلسات اللعب</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-l border-outline-variant/10 text-on-surface-variant">30 دقيقة / مرتين</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-l border-outline-variant/10 text-on-surface-variant">ساعة واحدة / 3 مرات</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-l border-outline-variant/10 text-on-surface-variant font-bold text-primary">وقت مفتوح + تدريب خاص</td>
 </tr>
 <tr class="hover:bg-surface-container-low transition-colors">
-<td class="p-8 font-bold text-on-surface">الاستحمام والنظافة</td>
-<td class="p-8 text-center border-l border-outline-variant/10">
+<td class="p-3 sm:p-5 md:p-8 font-bold text-on-surface">الاستحمام والنظافة</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-l border-outline-variant/10">
 <span class="material-symbols-outlined text-error no-mirror">close</span>
 </td>
-<td class="p-8 text-center border-l border-outline-variant/10 text-on-surface-variant">غسيل أساسي</td>
-<td class="p-8 text-center border-l border-outline-variant/10 text-on-surface-variant font-bold text-primary">جلسة "سبا" كاملة أسبوعياً</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-l border-outline-variant/10 text-on-surface-variant">غسيل أساسي</td>
+<td class="p-3 sm:p-5 md:p-8 text-center border-l border-outline-variant/10 text-on-surface-variant font-bold text-primary">جلسة "سبا" كاملة أسبوعياً</td>
 </tr>
 </tbody>
 </table>

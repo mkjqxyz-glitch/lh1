@@ -101,60 +101,116 @@ html.dark .text-\[\#b0bec8\] {
   color: #a3a3a0 !important;
 }
 
-/* —— Premium package ribbon (::before + ::after) —— */
-.premium-package-card {
+/* —— Premium package card: animated gradient border + coherent face (light/dark) —— */
+.premium-package-card.premium-package-card--animated {
+  --premium-face: #ffffff;
+  --premium-inset: 5px;
+  --premium-r-outer: 1.25rem;
+  --premium-r-inner: 0.9375rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
+  border-radius: var(--premium-r-outer);
+  isolation: isolate;
+  box-shadow: 0 12px 40px rgba(29, 28, 13, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
-.premium-package-card::before {
+html.dark .premium-package-card.premium-package-card--animated {
+  --premium-face: #141414;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.premium-package-card.premium-package-card--animated:hover {
+  box-shadow: 0 16px 48px rgba(29, 28, 13, 0.14);
+}
+
+html.dark .premium-package-card.premium-package-card--animated:hover {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+}
+
+/* Rotating gradient “ring” behind the face */
+.premium-package-card.premium-package-card--animated::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 10rem;
-  height: 2rem;
-  background: linear-gradient(135deg, #f97316 0%, #ea580c 45%, #dc2626 100%);
-  transform: rotate(-45deg) translate(-28%, -65%);
-  transform-origin: center;
-  z-index: 2;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 130%;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  transform: translate(-50%, -50%);
+  animation: premium-glow-rotate 3s linear infinite;
+  z-index: 0;
   pointer-events: none;
 }
 
-.premium-package-card::after {
-  content: attr(data-premium-ribbon);
+@keyframes premium-glow-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Inner mask — same tone as other package cards on the page */
+.premium-package-card.premium-package-card--animated::after {
+  content: "";
   position: absolute;
-  top: 0.55rem;
-  left: 0;
-  width: 7.5rem;
+  inset: var(--premium-inset);
+  border-radius: var(--premium-r-inner);
+  background: var(--premium-face);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.premium-package-card.premium-package-card--animated > .premium-package-card-inner {
+  position: relative;
+  z-index: 2;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 1.5rem;
+  border-radius: var(--premium-r-inner);
+}
+
+@media (min-width: 640px) {
+  .premium-package-card.premium-package-card--animated > .premium-package-card-inner {
+    padding: 2rem;
+  }
+}
+
+/* Badge label (replaces old diagonal ribbon text in ::after) */
+.premium-package-ribbon-label {
+  position: absolute;
+  top: 0.65rem;
+  left: 0.65rem;
+  z-index: 4;
   font-size: 0.62rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #fff;
-  transform: rotate(-45deg) translate(-8%, 0);
-  z-index: 3;
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 50%, #dc2626 100%);
+  padding: 0.35rem 0.65rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   pointer-events: none;
-  text-align: center;
   font-family: Manrope, system-ui, sans-serif;
 }
 
-html[dir="rtl"] .premium-package-card::before {
+html[dir="rtl"] .premium-package-ribbon-label {
   left: auto;
-  right: 0;
-  transform: rotate(45deg) translate(28%, -65%);
+  right: 0.65rem;
 }
 
-html[dir="rtl"] .premium-package-card::after {
-  left: auto;
-  right: 0;
-  transform: rotate(45deg) translate(8%, 0);
-}
-
-.premium-package-card > .premium-package-card-inner {
-  position: relative;
-  z-index: 1;
+@media (prefers-reduced-motion: reduce) {
+  .premium-package-card.premium-package-card--animated::before {
+    animation: none;
+    opacity: 0.85;
+  }
 }
 
 /* —— Service cards hover (V2) —— */
