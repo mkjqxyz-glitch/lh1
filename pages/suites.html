@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="en" class="light" dir="ltr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Suites | Loving Homes Dog Hotel</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@400;500;700&amp;family=Abhaya+Libre:wght@800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#f2efd5",
+              "on-primary-fixed-variant": "#404b1b",
+              "secondary-container": "#fda055",
+              "secondary-fixed": "#ffdcc4",
+              "primary-fixed": "#dbe9a9",
+              "on-secondary": "#ffffff",
+              "surface-variant": "#e7e3ca",
+              "surface-dim": "#dedbc2",
+              "on-primary-fixed": "#171e00",
+              "inverse-on-surface": "#f5f1d8",
+              "error": "#ba1a1a",
+              "error-container": "#ffdad6",
+              "surface-bright": "#fefae0",
+              "tertiary-fixed": "#ffd6fd",
+              "surface-tint": "#586330",
+              "on-error": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "inverse-primary": "#bfcd8f",
+              "on-surface-variant": "#46483c",
+              "on-error-container": "#93000a",
+              "outline": "#77786b",
+              "surface": "#fefae0",
+              "secondary": "#924c00",
+              "outline-variant": "#c7c8b9",
+              "tertiary-fixed-dim": "#e4b9e3",
+              "tertiary-container": "#7f5b80",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-fixed": "#2d1030",
+              "on-primary": "#ffffff",
+              "primary-fixed-dim": "#bfcd8f",
+              "on-secondary-fixed": "#2f1400",
+              "primary": "#485422",
+              "on-tertiary-fixed-variant": "#5c3b5e",
+              "surface-container-highest": "#e7e3ca",
+              "surface-container-low": "#f8f4db",
+              "on-tertiary-container": "#ffdcfc",
+              "primary-container": "#606c38",
+              "on-secondary-fixed-variant": "#6f3800",
+              "secondary-fixed-dim": "#ffb781",
+              "background": "#fefae0",
+              "on-surface": "#1d1c0d",
+              "inverse-surface": "#323120",
+              "on-primary-container": "#dfedac",
+              "tertiary": "#654367",
+              "on-secondary-container": "#703800",
+              "surface-container-high": "#ede9cf",
+              "on-background": "#1d1c0d"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .noto-serif-italic { font-family: 'Noto Serif'; font-style: italic; }
+        .abhaya { font-family: 'Abhaya Libre'; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Header / TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-[0_20px_50px_rgba(147,75,25,0.06)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<a class="text-2xl font-black text-[#5a6147] dark:text-[#8F9779] font-['Abhaya_Libre']" href="../index.html">
+                Loving Homes Dog Hotel
+            </a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="../index.html">Home</a>
+<a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="about.html">About</a>
+<a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="services.html">Services</a>
+<a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="packages.html">Packages</a>
+<a class="text-[#934b19] dark:text-[#d37e48] border-b-2 border-[#934b19] pb-1" href="suites.html">Suites</a>
+<a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="px-6 py-2 rounded-xl bg-[#485422] text-white abhaya text-sm hover:scale-95 active:duration-150 transition-transform inline-block" href="packages.html">Book Now</a>
+<a class="text-[#1a1c19] font-bold cursor-pointer" href="suites-ar.html">EN/AR</a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative py-24 px-8 max-w-7xl mx-auto overflow-hidden">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<h1 class="text-6xl md:text-7xl font-headline text-on-surface leading-tight mb-8">Royal <span class="noto-serif-italic text-secondary">Suites</span> <br/>for Your Loyal Friends</h1>
+<p class="text-xl text-on-surface-variant max-w-md mb-12 leading-relaxed">Small details that make a big difference in your pet's journey with us.</p>
+<div class="flex flex-wrap gap-6">
+<div class="flex items-center gap-3 bg-surface-container-low px-4 py-3 rounded-full">
+<span class="material-symbols-outlined text-primary">thermostat</span>
+<span class="text-sm font-medium">Underfloor Heating</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low px-4 py-3 rounded-full">
+<span class="material-symbols-outlined text-primary">videocam</span>
+<span class="text-sm font-medium">24/7 Private Camera</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low px-4 py-3 rounded-full">
+<span class="material-symbols-outlined text-primary">potted_plant</span>
+<span class="text-sm font-medium">Private Area</span>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 relative">
+<div class="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
+<img alt="Luxury Suite" class="w-full h-full object-cover" data-alt="luxury dog suite with plush velvet bedding, warm ambient lighting, and elegant wooden panelling in a high-end pet hotel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqaAAPrPl2aC3wxKMtocF8BpugbYgOzJ-ghhoz24dtOQk42shFZyhoj5Aicm23lrFnD572k4M00cyPPVV-t1UamyWis17ow5KMWJA1uw6P8KIHtCBJhprIN4rGBCdO9miskHdhBsp9AwB1_0p9Ec-4_iPKrFkonzE_mAR8qlmq6oT6pxleqj8PQrqK0dAIaDGzrVQE9yvH_hHSCqe_7Rhir5FwTR10SMEsXGCZnaVZjJ6kR3thx6s6HtnmcPoRj9MCZ5QcKojDHj6N"/>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -bottom-6 -left-6 w-48 h-48 bg-secondary-container/20 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Suite Types (Asymmetric Bento Grid) -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<h2 class="text-4xl font-headline mb-4">Choose the Perfect Suite</h2>
+<p class="text-on-surface-variant">Diverse options to suit every dog's needs and personality.</p>
+</div>
+<div class="h-px flex-grow bg-outline-variant mx-8 hidden md:block"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Royal Suite (Large Feature) -->
+<div class="md:col-span-8 group cursor-pointer" onclick="window.location.href='packages.html'">
+<div class="relative overflow-hidden rounded-[2.5rem] bg-surface h-[600px] shadow-sm hover:shadow-xl transition-all duration-500">
+<img alt="Royal Suite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="happy dog relaxing in a massive royal hotel suite with floor to ceiling windows and elegant pet furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjYGqPxNCWi_iVfNf1PnhRmef3ljuLTosSlLLEuDxo-1730Qrs4sv5plxCLQKGBaQo__qznklnzxk7vQsagm0w1gG2wmjnMSCHS-DzJH80_hX6zB82UdiWoFGD3mPoMauzApLGMikiblBElxzf8VsZvVmgijjwozHaAwEcyaSFK4xyNg_7tW-9bhGQULGTdLJRswcylOHoJbxPGrjEnMHjQPem5t1ik2V6xnVxw7H40LV6P2mYsmIqLapVyz9p5YxkxEAPqeZws1KT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-12 w-full text-white">
+<div class="flex justify-between items-end">
+<div>
+<span class="bg-secondary px-4 py-1 rounded-full text-xs font-bold mb-4 inline-block">Most Luxurious</span>
+<h3 class="text-5xl font-headline mb-2">Royal Suite</h3>
+<p class="text-surface-variant max-w-lg">A vast space including a private indoor garden, a screen for dog-specific content, and daily massage service.</p>
+</div>
+<div class="text-right">
+<p class="text-3xl font-headline">450 SAR</p>
+<p class="text-sm opacity-80">Per Night</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Comfort Suite -->
+<div class="md:col-span-4 group cursor-pointer" onclick="window.location.href='packages.html'">
+<div class="bg-surface-container-highest rounded-[2.5rem] p-8 h-full flex flex-col justify-between border border-transparent hover:border-secondary transition-all">
+<div>
+<div class="aspect-square rounded-2xl overflow-hidden mb-8">
+<img alt="Comfort Suite" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="cozy premium dog room with soft earth toned textures and a personalized name plate on a comfortable bed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEblA1lQWdJyyB5isRu-KyNOgvqMGdnhZlK3PFQ1GnAB1Y-lJeJ5gSLydCy8qen7-A3D1opnufay8cWlPsBGuaJbOeeIQ5RfviaEgl2TpvT6pKhhQrBUSMt-lvf_gtiHwmTxt5fVnB8511P1xMz49_BweafDn3gwOGq4Yz6ynsEeSZ68hcMRjWdVCQ8817GjkSgtOl5tkwmM5QDHpUXlL9slXfE79vJst6SPUShuJlGxQ8ARJDgj-dEPPukhah69NA-1wRqeUpnweQ"/>
+</div>
+<h3 class="text-2xl font-headline mb-3">Comfort Suite</h3>
+<p class="text-on-surface-variant mb-6 text-sm">A perfect balance between space and privacy, ideal for long stays and dogs that love tranquility.</p>
+</div>
+<div class="flex justify-between items-center pt-6 border-t border-outline-variant">
+<span class="text-xl font-bold">280 SAR</span>
+<button class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Classic Suite (Horizontal Layout) -->
+<div class="md:col-span-12 group cursor-pointer">
+<div class="bg-white rounded-[2.5rem] overflow-hidden grid md:grid-cols-2 shadow-sm hover:shadow-lg transition-all border border-surface-container">
+<div class="p-12 flex flex-col justify-center">
+<h3 class="text-3xl font-headline mb-4">Classic Suite</h3>
+<p class="text-on-surface-variant mb-8 leading-relaxed">The preferred choice for active dogs, providing a comfortable and safe environment with direct access to group play areas under expert supervision.</p>
+<div class="flex gap-4 mb-8">
+<div class="flex items-center gap-2 text-primary font-medium text-sm"><span class="material-symbols-outlined text-sm">check_circle</span> Regular Sanitization</div>
+<div class="flex items-center gap-2 text-primary font-medium text-sm"><span class="material-symbols-outlined text-sm">check_circle</span> Healthy Meals</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="text-2xl font-bold">150 SAR</span>
+<a class="px-8 py-3 rounded-full bg-primary text-on-primary font-bold hover:bg-primary-container hover:text-on-primary-container transition-all" href="packages.html">Book this Suite</a>
+</div>
+</div>
+<div class="h-[400px]">
+<img alt="Classic Suite" class="w-full h-full object-cover" data-alt="clean modern dog hotel kennel with high quality materials and comfortable bedding in warm natural light" src="https://wallpaperaccess.com/full/902870.jpg"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Bento Section -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h2 class="text-4xl font-headline mb-4">More than just a stay</h2>
+<p class="text-on-surface-variant">Small details that make a big difference in your pet's journey with us.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-6">
+<!-- Feature 1 -->
+<div class="p-8 rounded-[2rem] bg-primary text-on-primary flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">videocam</span>
+</div>
+<h4 class="text-xl font-headline mb-3">24/7 Live Stream</h4>
+<p class="text-on-primary/80 text-sm leading-relaxed">Monitor your pet anytime and from anywhere via our private app, to always stay reassured.</p>
+</div>
+<!-- Feature 2 -->
+<div class="p-8 rounded-[2rem] bg-secondary-container text-on-secondary-container flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">thermostat</span>
+</div>
+<h4 class="text-xl font-headline mb-3">Smart Thermal Control</h4>
+<p class="text-on-secondary-container/80 text-sm leading-relaxed">Underfloor heating and cooling systems ensure ideal temperature throughout all seasons of the year.</p>
+</div>
+<!-- Feature 3 -->
+<div class="p-8 rounded-[2rem] bg-surface-container-highest flex flex-col items-center text-center border border-outline-variant">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl text-primary" style="font-variation-settings: 'FILL' 1;">potted_plant</span>
+</div>
+<h4 class="text-xl font-headline mb-3 text-on-surface">Natural Environment</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">We use natural materials and safe plants to create an atmosphere of relaxation and psychological peace.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[2rem] bg-[#5a6147] dark:bg-stone-950 text-[#fafaf5]">
+<div class="w-full px-12 py-20 flex flex-col md:flex-row justify-between items-start gap-12 max-w-7xl mx-auto">
+<div class="max-w-xs">
+<a class="text-xl font-bold text-[#fafaf5] mb-6 block" href="../index.html">Loving Homes Dog Hotel</a>
+<p class="text-[#fafaf5]/80 leading-relaxed mb-8">We believe every dog deserves a luxury vacation as much as their owner. Quality, safety, and love are our pillars.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div>
+<h5 class="font-bold mb-6 text-secondary-container">Quick Links</h5>
+<ul class="space-y-4">
+<li><a class="text-[#fafaf5]/80 hover:text-white underline-offset-4 hover:underline transition-all" href="../index.html">Home</a></li>
+<li><a class="text-[#8F9779] underline-offset-4 hover:underline transition-all" href="suites.html">Our Suites</a></li>
+<li><a class="text-[#fafaf5]/80 hover:text-white underline-offset-4 hover:underline transition-all" href="packages.html">Stay Packages</a></li>
+<li><a class="text-[#fafaf5]/80 hover:text-white underline-offset-4 hover:underline transition-all" href="about.html">About Hotel</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-secondary-container">Resources</h5>
+<ul class="space-y-4">
+<li><a class="text-[#fafaf5]/80 hover:text-white underline-offset-4 hover:underline transition-all" href="services.html">Our Services</a></li>
+<li><a class="text-[#fafaf5]/80 hover:text-white underline-offset-4 hover:underline transition-all" href="contact.html">Contact Us</a></li>
+<li><a class="text-[#fafaf5]/80 hover:text-white underline-offset-4 hover:underline transition-all" href="#">Privacy Policy</a></li>
+<li><a class="text-[#fafaf5]/80 hover:text-white underline-offset-4 hover:underline transition-all" href="#">Terms</a></li>
+</ul>
+</div>
+</div>
+<div class="bg-white/5 p-8 rounded-3xl border border-white/10">
+<h5 class="font-bold mb-4">Newsletter</h5>
+<div class="flex bg-white rounded-full overflow-hidden p-1">
+<input class="bg-transparent border-none text-on-surface focus:ring-0 px-4 py-2 w-full" placeholder="Your Email" type="email"/>
+<button class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-container transition-colors">Send</button>
+</div>
+</div>
+</div>
+<div class="w-full px-12 py-8 border-t border-white/10 text-center text-[#fafaf5]/60 text-sm">© 2024 Loving Homes Dog Hotel. All rights reserved.</div>
+</footer>
+</body></html>
