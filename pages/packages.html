@@ -100,14 +100,15 @@
             transform: scaleX(1);
         }
     </style>
+<link href="../assets/site-nav.css" rel="stylesheet"/>
 </head>
-<body class="bg-background text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<body class="bg-background text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed overflow-x-hidden">
 <!-- Top Navigation Bar -->
 <header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-[0_20px_50px_rgba(147,75,25,0.06)]">
-<nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
-<div class="flex items-center gap-8">
-<a class="text-2xl font-black text-[#5a6147] dark:text-[#8F9779] font-['Abhaya_Libre']" href="../index.html">Loving Homes Dog Hotel</a>
-<div class="hidden md:flex items-center gap-6">
+<nav class="relative flex items-center justify-between gap-3 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-3 md:py-4 rtl" aria-label="Main navigation">
+<a class="relative z-[1] min-w-0 text-xl sm:text-2xl font-black text-[#5a6147] dark:text-[#8F9779] font-['Abhaya_Libre'] truncate max-w-[58vw] sm:max-w-[220px] md:max-w-none" href="../index.html">Loving Homes Dog Hotel</a>
+<div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-6 pointer-events-none">
+<div class="pointer-events-auto flex items-center gap-6">
 <a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors" href="../index.html">Home</a>
 <a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors" href="about.html">About</a>
 <a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors" href="services.html">Services</a>
@@ -116,19 +117,45 @@
 <a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors" href="contact.html">Contact</a>
 </div>
 </div>
-<div class="flex items-center gap-4">
-<a class="text-label text-on-surface-variant font-medium cursor-pointer hover:text-primary transition-colors" href="packages-ar.html">AR/EN</a>
-<a class="bg-primary hover:bg-primary-container text-on-primary px-6 py-2 rounded-xl text-sm font-brand uppercase tracking-wide transition-all transform active:scale-95 shadow-lg inline-block" href="contact.html">Book Now</a>
+<div class="relative z-[1] flex items-center gap-2 sm:gap-3 shrink-0">
+<a class="hidden md:inline-flex text-label text-on-surface-variant font-medium hover:text-primary transition-colors items-center justify-center rounded-lg px-2 py-2 text-sm" href="packages-ar.html">AR/EN</a>
+<a class="hidden md:inline-flex bg-primary hover:bg-primary-container text-on-primary px-5 py-2.5 rounded-xl text-sm font-brand uppercase tracking-wide shadow-lg text-center transition-transform active:scale-95" href="contact.html">Book Now</a>
+<button type="button" id="site-nav-toggle" class="site-nav-toggle md:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl text-[#1a1c19] dark:text-[#fafaf5] hover:bg-black/5 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-expanded="false" aria-controls="site-nav-drawer" aria-label="Open menu">
+<span class="material-symbols-outlined text-[1.75rem]" aria-hidden="true">menu</span>
+</button>
 </div>
 </nav>
+<div id="site-nav-backdrop" class="site-nav-backdrop md:hidden" hidden></div>
+<div id="site-nav-drawer" class="site-nav-drawer md:hidden" hidden role="dialog" aria-modal="true" aria-labelledby="site-nav-drawer-title">
+<div class="site-nav-drawer-inner">
+<div class="flex items-center justify-between gap-3 border-b border-[#1a1c19]/10 dark:border-white/10 pb-4 mb-2">
+<h2 id="site-nav-drawer-title" class="text-lg font-black text-[#5a6147] dark:text-[#8F9779] font-['Abhaya_Libre']">Menu</h2>
+<button type="button" id="site-nav-close" class="inline-flex h-10 w-10 items-center justify-center rounded-xl text-[#1a1c19] dark:text-[#fafaf5] hover:bg-black/5 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-label="Close menu">
+<span class="material-symbols-outlined text-2xl" aria-hidden="true">close</span>
+</button>
+</div>
+<nav class="flex flex-col py-2" aria-label="Mobile">
+<a class="site-nav-mobile-link" href="../index.html">Home</a>
+<a class="site-nav-mobile-link" href="about.html">About</a>
+<a class="site-nav-mobile-link" href="services.html">Services</a>
+<a class="site-nav-mobile-link is-active" href="packages.html">Packages</a>
+<a class="site-nav-mobile-link" href="suites.html">Suites</a>
+<a class="site-nav-mobile-link" href="contact.html">Contact</a>
+</nav>
+<div class="flex flex-col gap-3 pt-4 mt-2 border-t border-[#1a1c19]/10 dark:border-white/10">
+<a class="site-nav-mobile-cta text-center rounded-xl bg-primary text-on-primary py-3.5 px-4 text-sm font-brand font-extrabold uppercase tracking-wide shadow-lg" href="contact.html">Book Now</a>
+<a class="site-nav-mobile-link text-center text-[#934b19] dark:text-[#d37e48] font-bold" href="packages-ar.html">AR / EN</a>
+</div>
+</div>
+</div>
 </header>
 <main>
 <!-- Hero Section -->
-<section class="relative py-20 px-8 max-w-7xl mx-auto overflow-hidden">
+<section class="relative py-12 md:py-20 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto overflow-hidden">
 <div class="flex flex-col items-start gap-12">
 <div class="z-10 w-full text-center md:text-left">
 <span class="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block">Luxury for every loyal friend</span>
-<h1 class="text-5xl md:text-7xl font-headline font-black leading-tight text-on-surface mb-6">Stay <span class="italic text-primary font-light">Packages</span> Tailored with Care</h1>
+<h1 class="text-4xl sm:text-5xl md:text-7xl font-headline font-black leading-tight text-on-surface mb-6">Stay <span class="italic text-primary font-light">Packages</span> Tailored with Care</h1>
 <p class="text-lg text-on-surface-variant max-w-xl leading-relaxed mx-auto md:mx-0">We offer a variety of packages to suit every dog's needs, from simple day care to luxury stays full of pampering.</p>
 </div>
 <div class="relative w-full">
@@ -314,4 +341,5 @@
 </div>
 <div class="w-full mt-12 pt-8 border-t border-white/10 text-center opacity-60 text-xs">© 2024 Loving Homes Dog Hotel. All rights reserved.</div>
 </footer>
+<script src="../assets/site-nav.js" defer></script>
 </body></html>

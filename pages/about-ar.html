@@ -86,14 +86,15 @@
             font-feature-settings: "ss01", "ss02", "cv01", "cv02";
         }
     </style>
+<link href="../assets/site-nav.css" rel="stylesheet"/>
 </head>
 <body class="bg-surface text-on-surface font-body antialiased overflow-x-hidden">
 <!-- TopNavBar -->
 <header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-[0_20px_50px_rgba(147,75,25,0.06)]">
-<nav class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
-<div class="flex items-center gap-8">
-<a class="text-2xl font-black text-[#5a6147] dark:text-[#8F9779] font-brand" href="../index-ar.html">Loving Homes Dog Hotel</a>
-<div class="hidden md:flex items-center gap-6">
+<nav class="relative flex items-center justify-between gap-3 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-3 md:py-4" aria-label="التنقل الرئيسي">
+<a class="relative z-[1] min-w-0 text-xl sm:text-2xl font-black text-[#5a6147] dark:text-[#8F9779] font-brand truncate max-w-[58vw] sm:max-w-[220px] md:max-w-none" href="../index-ar.html">Loving Homes Dog Hotel</a>
+<div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-6 pointer-events-none">
+<div class="pointer-events-auto flex items-center gap-6">
 <a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="../index-ar.html">الرئيسية</a>
 <a class="text-[#934b19] dark:text-[#d37e48] border-b-2 border-[#934b19] font-bold pb-1" href="about-ar.html">من نحن</a>
 <a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="services-ar.html">الخدمات</a>
@@ -102,19 +103,45 @@
 <a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="contact-ar.html">تواصل</a>
 </div>
 </div>
-<div class="flex items-center gap-4">
-<a class="text-label text-sm font-medium text-[#1a1c19] hover:text-[#934b19] transition-colors" href="about.html">AR/EN</a>
-<a class="bg-primary text-on-primary px-6 py-2 rounded-xl text-sm font-brand font-extrabold scale-95 active:duration-150 transition-transform shadow-md inline-block" href="packages-ar.html">احجز الآن</a>
+<div class="relative z-[1] flex items-center gap-2 sm:gap-3 shrink-0">
+<a class="hidden md:inline-flex text-label text-sm font-medium text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors items-center justify-center rounded-lg px-2 py-2" href="about.html">AR/EN</a>
+<a class="hidden md:inline-flex bg-primary text-on-primary px-5 py-2.5 rounded-xl text-sm font-brand font-extrabold shadow-md text-center transition-transform active:scale-95" href="packages-ar.html">احجز الآن</a>
+<button type="button" id="site-nav-toggle" class="site-nav-toggle md:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl text-[#1a1c19] dark:text-[#fafaf5] hover:bg-black/5 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-expanded="false" aria-controls="site-nav-drawer" aria-label="فتح القائمة">
+<span class="material-symbols-outlined text-[1.75rem]" aria-hidden="true">menu</span>
+</button>
 </div>
 </nav>
+<div id="site-nav-backdrop" class="site-nav-backdrop md:hidden" hidden></div>
+<div id="site-nav-drawer" class="site-nav-drawer md:hidden" hidden role="dialog" aria-modal="true" aria-labelledby="site-nav-drawer-title">
+<div class="site-nav-drawer-inner">
+<div class="flex items-center justify-between gap-3 border-b border-[#1a1c19]/10 dark:border-white/10 pb-4 mb-2">
+<h2 id="site-nav-drawer-title" class="text-lg font-black text-[#5a6147] dark:text-[#8F9779] font-brand">القائمة</h2>
+<button type="button" id="site-nav-close" class="inline-flex h-10 w-10 items-center justify-center rounded-xl text-[#1a1c19] dark:text-[#fafaf5] hover:bg-black/5 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-label="إغلاق القائمة">
+<span class="material-symbols-outlined text-2xl" aria-hidden="true">close</span>
+</button>
+</div>
+<nav class="flex flex-col py-2" aria-label="جوال">
+<a class="site-nav-mobile-link" href="../index-ar.html">الرئيسية</a>
+<a class="site-nav-mobile-link is-active" href="about-ar.html">من نحن</a>
+<a class="site-nav-mobile-link" href="services-ar.html">الخدمات</a>
+<a class="site-nav-mobile-link" href="packages-ar.html">الباقات</a>
+<a class="site-nav-mobile-link" href="suites-ar.html">الأجنحة</a>
+<a class="site-nav-mobile-link" href="contact-ar.html">تواصل</a>
+</nav>
+<div class="flex flex-col gap-3 pt-4 mt-2 border-t border-[#1a1c19]/10 dark:border-white/10">
+<a class="site-nav-mobile-cta text-center rounded-xl bg-primary text-on-primary py-3.5 px-4 text-sm font-brand font-extrabold shadow-md" href="packages-ar.html">احجز الآن</a>
+<a class="site-nav-mobile-link text-center text-[#934b19] dark:text-[#d37e48] font-bold" href="about.html">AR / EN</a>
+</div>
+</div>
+</div>
 </header>
 <main>
 <!-- Hero Section: Editorial Style -->
-<section class="relative min-h-[716px] flex items-center pt-20 px-8 max-w-7xl mx-auto">
+<section class="relative min-h-0 md:min-h-[716px] flex items-center pt-16 md:pt-20 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
 <div class="grid md:grid-cols-12 gap-12 items-center w-full">
 <div class="md:col-span-7 z-10">
 <span class="text-secondary font-bold tracking-widest text-sm mb-4 block uppercase">إرثنا وشغفنا</span>
-<h1 class="text-5xl md:text-7xl font-headline text-on-surface leading-tight mb-8">حيث تبدأ <span class="italic text-primary">القصص الجميلة</span><br/>لكل حيوان أليف.</h1>
+<h1 class="text-4xl sm:text-5xl md:text-7xl font-headline text-on-surface leading-tight mb-8">حيث تبدأ <span class="italic text-primary">القصص الجميلة</span><br/>لكل حيوان أليف.</h1>
 <p class="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed font-body">في "Loving Homes"، لا نعتبر أنفسنا مجرد فندق للكلاب؛ بل نحن امتداد لمنزلك، وملاذ آمن يجمع بين رفاهية الفنادق ودفء العائلة.</p>
 </div>
 <div class="md:col-span-5 relative">
@@ -250,4 +277,5 @@
 </div>
 </div>
 </footer>
+<script src="../assets/site-nav.js" defer></script>
 </body></html>

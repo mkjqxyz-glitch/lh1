@@ -79,34 +79,61 @@
         .abhaya { font-family: 'Abhaya Libre'; }
         .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); }
     </style>
+<link href="../assets/site-nav.css" rel="stylesheet"/>
 </head>
-<body class="bg-surface text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed overflow-x-hidden">
 <!-- Header / TopNavBar -->
 <header class="sticky top-0 w-full z-50 bg-white/80 dark:bg-stone-900/80 backdrop-blur-md shadow-[0_20px_50px_rgba(147,75,25,0.06)]">
-<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
-<a class="text-2xl font-black text-[#5a6147] dark:text-[#8F9779] font-['Abhaya_Libre']" href="../index.html">
-                Loving Homes Dog Hotel
-            </a>
-<nav class="hidden md:flex items-center gap-8">
+<nav class="relative flex items-center justify-between gap-3 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-3 md:py-4 ltr" aria-label="Main navigation">
+<a class="relative z-[1] min-w-0 text-xl sm:text-2xl font-black text-[#5a6147] dark:text-[#8F9779] font-['Abhaya_Libre'] truncate max-w-[58vw] sm:max-w-[220px] md:max-w-none" href="../index.html">Loving Homes Dog Hotel</a>
+<div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-8 pointer-events-none">
+<div class="pointer-events-auto flex items-center gap-8">
 <a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="../index.html">Home</a>
 <a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="about.html">About</a>
 <a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="services.html">Services</a>
 <a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="packages.html">Packages</a>
 <a class="text-[#934b19] dark:text-[#d37e48] border-b-2 border-[#934b19] pb-1" href="suites.html">Suites</a>
 <a class="text-[#1a1c19] dark:text-[#fafaf5] hover:text-[#934b19] transition-colors duration-300" href="contact.html">Contact</a>
+</div>
+</div>
+<div class="relative z-[1] flex items-center gap-2 sm:gap-3 shrink-0">
+<a class="hidden md:inline-flex text-[#1a1c19] dark:text-[#fafaf5] font-bold items-center justify-center rounded-lg px-2 py-2 text-sm" href="suites-ar.html">EN/AR</a>
+<a class="hidden md:inline-flex px-5 py-2.5 rounded-xl bg-[#485422] text-white abhaya text-sm text-center transition-transform active:scale-95" href="packages.html">Book Now</a>
+<button type="button" id="site-nav-toggle" class="site-nav-toggle md:hidden inline-flex h-11 w-11 items-center justify-center rounded-xl text-[#1a1c19] dark:text-[#fafaf5] hover:bg-black/5 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-expanded="false" aria-controls="site-nav-drawer" aria-label="Open menu">
+<span class="material-symbols-outlined text-[1.75rem]" aria-hidden="true">menu</span>
+</button>
+</div>
 </nav>
-<div class="flex items-center gap-4">
-<a class="px-6 py-2 rounded-xl bg-[#485422] text-white abhaya text-sm hover:scale-95 active:duration-150 transition-transform inline-block" href="packages.html">Book Now</a>
-<a class="text-[#1a1c19] font-bold cursor-pointer" href="suites-ar.html">EN/AR</a>
+<div id="site-nav-backdrop" class="site-nav-backdrop md:hidden" hidden></div>
+<div id="site-nav-drawer" class="site-nav-drawer md:hidden" hidden role="dialog" aria-modal="true" aria-labelledby="site-nav-drawer-title">
+<div class="site-nav-drawer-inner">
+<div class="flex items-center justify-between gap-3 border-b border-[#1a1c19]/10 dark:border-white/10 pb-4 mb-2">
+<h2 id="site-nav-drawer-title" class="text-lg font-black text-[#5a6147] dark:text-[#8F9779] font-['Abhaya_Libre']">Menu</h2>
+<button type="button" id="site-nav-close" class="inline-flex h-10 w-10 items-center justify-center rounded-xl text-[#1a1c19] dark:text-[#fafaf5] hover:bg-black/5 dark:hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#934b19]" aria-label="Close menu">
+<span class="material-symbols-outlined text-2xl" aria-hidden="true">close</span>
+</button>
+</div>
+<nav class="flex flex-col py-2" aria-label="Mobile">
+<a class="site-nav-mobile-link" href="../index.html">Home</a>
+<a class="site-nav-mobile-link" href="about.html">About</a>
+<a class="site-nav-mobile-link" href="services.html">Services</a>
+<a class="site-nav-mobile-link" href="packages.html">Packages</a>
+<a class="site-nav-mobile-link is-active" href="suites.html">Suites</a>
+<a class="site-nav-mobile-link" href="contact.html">Contact</a>
+</nav>
+<div class="flex flex-col gap-3 pt-4 mt-2 border-t border-[#1a1c19]/10 dark:border-white/10">
+<a class="site-nav-mobile-cta text-center rounded-xl bg-[#485422] text-white py-3.5 px-4 text-sm abhaya font-bold" href="packages.html">Book Now</a>
+<a class="site-nav-mobile-link text-center text-[#934b19] dark:text-[#d37e48] font-bold" href="suites-ar.html">EN / AR</a>
+</div>
 </div>
 </div>
 </header>
 <main>
 <!-- Hero Section -->
-<section class="relative py-24 px-8 max-w-7xl mx-auto overflow-hidden">
+<section class="relative py-12 md:py-24 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto overflow-hidden">
 <div class="grid md:grid-cols-2 gap-16 items-center">
 <div class="order-2 md:order-1">
-<h1 class="text-6xl md:text-7xl font-headline text-on-surface leading-tight mb-8">Royal <span class="noto-serif-italic text-secondary">Suites</span> <br/>for Your Loyal Friends</h1>
+<h1 class="text-4xl sm:text-5xl md:text-7xl font-headline text-on-surface leading-tight mb-8">Royal <span class="noto-serif-italic text-secondary">Suites</span> <br/>for Your Loyal Friends</h1>
 <p class="text-xl text-on-surface-variant max-w-md mb-12 leading-relaxed">Small details that make a big difference in your pet's journey with us.</p>
 <div class="flex flex-wrap gap-6">
 <div class="flex items-center gap-3 bg-surface-container-low px-4 py-3 rounded-full">
@@ -283,4 +310,5 @@
 </div>
 <div class="w-full px-12 py-8 border-t border-white/10 text-center text-[#fafaf5]/60 text-sm">© 2024 Loving Homes Dog Hotel. All rights reserved.</div>
 </footer>
+<script src="../assets/site-nav.js" defer></script>
 </body></html>
