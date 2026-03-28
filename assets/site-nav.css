@@ -1,4 +1,4 @@
-/* Mobile nav: backdrop, drawer, body lock */
+/* Mobile nav: backdrop, drawer, body lock — drawer is a direct child of body (not inside header) for correct stacking */
 .site-nav-open {
   overflow: hidden;
   touch-action: none;
@@ -9,10 +9,11 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Above page content (hero z-10, header z-50) */
 .site-nav-backdrop {
   position: fixed;
   inset: 0;
-  z-index: 60;
+  z-index: 9998;
   background: rgba(29, 28, 13, 0.45);
   opacity: 0;
   visibility: hidden;
@@ -27,13 +28,14 @@
 .site-nav-drawer {
   position: fixed;
   inset: 0;
-  z-index: 70;
+  z-index: 9999;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   padding: max(env(safe-area-inset-top), 0) max(env(safe-area-inset-right), 0)
     max(env(safe-area-inset-bottom), 0) max(env(safe-area-inset-left), 0);
   pointer-events: none;
+  isolation: isolate;
 }
 
 .site-nav-drawer.is-open {
@@ -43,13 +45,12 @@
 .site-nav-drawer-inner {
   width: 100%;
   max-height: min(88vh, 100% - 2.5rem);
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   background: rgba(254, 250, 224, 0.98);
   border-radius: 1.25rem 1.25rem 0 0;
   box-shadow: 0 -12px 48px rgba(29, 28, 13, 0.15);
-  padding: 1rem 1.25rem max(1.25rem, env(safe-area-inset-bottom));
   transform: translateY(100%);
   transition: transform 0.28s cubic-bezier(0.32, 0.72, 0, 1);
 }
@@ -61,6 +62,55 @@
 
 .site-nav-drawer.is-open .site-nav-drawer-inner {
   transform: translateY(0);
+}
+
+/* Title row: stays on top, never scrolls under links */
+.site-nav-drawer-head {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem 0.75rem;
+  border-bottom: 1px solid rgba(26, 28, 25, 0.12);
+  background: inherit;
+}
+
+.site-nav-drawer-head h2 {
+  min-width: 0;
+  flex: 1 1 auto;
+  margin: 0;
+  text-align: start;
+}
+
+.dark .site-nav-drawer-head {
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Scrollable links only */
+.site-nav-drawer-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  padding: 0.35rem 1.25rem 0.5rem;
+}
+
+/* Book + language: fixed at bottom of sheet */
+.site-nav-drawer-foot {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem max(1rem, env(safe-area-inset-bottom));
+  border-top: 1px solid rgba(26, 28, 25, 0.12);
+  background: inherit;
+}
+
+.dark .site-nav-drawer-foot {
+  border-top-color: rgba(255, 255, 255, 0.12);
 }
 
 .site-nav-mobile-link {
