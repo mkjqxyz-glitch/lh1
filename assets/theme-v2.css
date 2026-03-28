@@ -1,6 +1,6 @@
 /**
  * Loving Homes — V2.0 theme layer
- * Dark mode base: #07182E; light mode preserves existing Tailwind semantic colors.
+ * Dark mode: luxury neutral black / charcoal (no navy). Light mode: existing Tailwind tokens.
  */
 
 /* —— Dark mode (html.dark) —— */
@@ -9,76 +9,76 @@ html.dark {
 }
 
 html.dark body {
-  background-color: #07182e !important;
-  color: #e8eef4;
+  background-color: #0a0a0a !important;
+  color: #f5f5f4;
 }
 
-/* Core semantic surfaces */
+/* Core semantic surfaces — rich black, layered charcoals */
 html.dark .bg-surface,
 html.dark .bg-background,
 html.dark .bg-surface-bright {
-  background-color: #07182e !important;
+  background-color: #0a0a0a !important;
 }
 
 html.dark .bg-surface-container-low {
-  background-color: #0d2438 !important;
+  background-color: #111111 !important;
 }
 
 html.dark .bg-surface-container-lowest {
-  background-color: #0f2d44 !important;
+  background-color: #141414 !important;
 }
 
 html.dark .bg-surface-container-high,
 html.dark .bg-surface-container-highest,
 html.dark .bg-surface-variant {
-  background-color: #0f2d44 !important;
+  background-color: #181818 !important;
 }
 
 html.dark .bg-surface-container {
-  background-color: #0d2438 !important;
+  background-color: #111111 !important;
 }
 
 html.dark .bg-white {
-  background-color: #0f2d44 !important;
+  background-color: #141414 !important;
 }
 
 html.dark .text-on-surface,
 html.dark .text-on-background {
-  color: #e8eef4 !important;
+  color: #f5f5f4 !important;
 }
 
 html.dark .text-on-surface-variant {
-  color: #b0bec8 !important;
+  color: #a3a3a0 !important;
 }
 
 html.dark [class*="border-outline"] {
-  border-color: rgba(255, 255, 255, 0.12) !important;
-}
-
-html.dark [class*="divide-outline"] > :not([hidden]) ~ :not([hidden]) {
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
+html.dark [class*="divide-outline"] > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
 html.dark header.sticky {
-  background-color: rgba(7, 24, 46, 0.92) !important;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  background-color: rgba(10, 10, 10, 0.94) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 html.dark .glass-panel {
-  background: rgba(15, 45, 68, 0.85) !important;
+  background: rgba(20, 20, 20, 0.92) !important;
 }
 
 html.dark footer {
-  background-color: #050d18 !important;
+  background-color: #000000 !important;
 }
 
-/* Mobile hamburger drawer — align with V2 dark palette (readable on phone) */
+/* Mobile hamburger drawer */
 html.dark .site-nav-drawer-inner {
-  background: rgba(7, 24, 46, 0.98) !important;
-  box-shadow: 0 -12px 48px rgba(0, 0, 0, 0.45) !important;
+  background: rgba(10, 10, 10, 0.98) !important;
+  box-shadow: 0 -12px 48px rgba(0, 0, 0, 0.55) !important;
 }
 
-/* Primary / secondary accents stay recognizable */
+/* Primary / secondary accents (brand stays warm on black) */
 html.dark .text-primary {
   color: #a8c47a !important;
 }
@@ -87,9 +87,18 @@ html.dark .text-secondary {
   color: #f0a060 !important;
 }
 
-/* Tables */
+/* Tables / elevated panels */
 html.dark .bg-surface.shadow-2xl {
-  background-color: #0f2d44 !important;
+  background-color: #141414 !important;
+}
+
+/* Tailwind arbitrary text used in nav — neutral ivory on dark */
+html.dark .text-\[\#e8eef4\] {
+  color: #f5f5f4 !important;
+}
+
+html.dark .text-\[\#b0bec8\] {
+  color: #a3a3a0 !important;
 }
 
 /* —— Premium package ribbon (::before + ::after) —— */

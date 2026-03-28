@@ -56,8 +56,8 @@
 }
 
 .dark .site-nav-drawer-inner {
-  background: rgba(28, 25, 23, 0.98);
-  box-shadow: 0 -12px 48px rgba(0, 0, 0, 0.35);
+  background: rgba(10, 10, 10, 0.98);
+  box-shadow: 0 -12px 48px rgba(0, 0, 0, 0.5);
 }
 
 .site-nav-drawer.is-open .site-nav-drawer-inner {
